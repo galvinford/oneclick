@@ -1,0 +1,2011 @@
+"Buddy request sent!"
+app/controllers/buddy_relationships_controller.rb: flash[:info] = "Buddy request sent!"
+
+'/devise/registrations/buddies'
+app/controllers/buddy_relationships_controller.rb: render partial: '/devise/registrations/buddies'
+app/controllers/buddy_relationships_controller.rb: render partial: '/devise/registrations/buddies'
+
+"Buddy removed."
+app/controllers/buddy_relationships_controller.rb: flash[:info] = "Buddy removed."
+
+"404 Not Found"
+app/controllers/errors_controller.rb: format.any  { render text: "404 Not Found", status: 404 }
+
+"422 Unprocessable Entity"
+app/controllers/errors_controller.rb: format.any  { render text: "422 Unprocessable Entity", status: 422 }
+
+"#{Rails.root}/public/500.html"
+app/controllers/errors_controller.rb: render file: "#{Rails.root}/public/500.html", layout: false, status: 500
+
+"501 Not Implemented"
+app/controllers/errors_controller.rb: format.any  { render text: "501 Not Implemented", status: 501 }
+
+'reports_time_filter_type'
+app/controllers/reports_controller.rb: TIME_FILTER_TYPE_SESSION_KEY = 'reports_time_filter_type'
+
+'/devise/registrations/travelers'
+app/controllers/traveler_relationships_controller.rb: render partial: '/devise/registrations/travelers'
+app/controllers/traveler_relationships_controller.rb: render partial: '/devise/registrations/travelers'
+
+'/'
+app/controllers/traveler_relationships_controller.rb: redirect_to '/'
+app/controllers/traveler_relationships_controller.rb: redirect_to '/'
+app/helpers/application_helper.rb: parts = path.split('/', 3)
+app/helpers/application_helper.rb: parts = parts.join('/')
+app/helpers/application_helper.rb: parts = link_text.split('/', 3)
+app/helpers/application_helper.rb: parts = parts.join('/')
+app/helpers/application_helper.rb: return '/' if parts.empty?
+config/routes.rb: match '/' => 'home#index'
+
+'trips_time_filter_type'
+app/controllers/trips_controller.rb: TIME_FILTER_TYPE_SESSION_KEY = 'trips_time_filter_type'
+
+"Begin email"
+app/controllers/trips_controller.rb: Rails.logger.info "Begin email"
+
+"ARC OneClick Trip Itinerary"
+app/controllers/trips_controller.rb: UserMailer.user_trip_email(email_addresses, @trip, "ARC OneClick Trip Itinerary", from_email).deliver
+
+"An email was sent to #{email_addresses.join(', ')}."
+app/controllers/trips_controller.rb: format.html { redirect_to(@trip, :notice => "An email was sent to #{email_addresses.join(', ')}." ) }
+
+"0"
+app/controllers/trips_controller.rb: @time_filter_type = "0"
+
+'Unable to remove itinerary.'
+app/controllers/trips_controller.rb: render text: 'Unable to remove itinerary.', status: 500
+app/controllers/trips_controller.rb: render text: 'Unable to remove itinerary.', status: 500
+
+"<li>%s (%s)</li>"
+app/controllers/trips_controller.rb: "<li>%s (%s)</li>" % [i.message, i.status]
+
+'<ol>'
+app/controllers/trips_controller.rb: message = message + '<ol>' + details.join + '</ol>'
+
+'</ol>'
+app/controllers/trips_controller.rb: message = message + '<ol>' + details.join + '</ol>'
+
+"new"
+app/controllers/trips_controller.rb: format.html { render action: "new" }
+
+"Begin get trip"
+app/controllers/trips_controller.rb: Rails.logger.info "Begin get trip"
+
+"End get trip"
+app/controllers/trips_controller.rb: Rails.logger.info "End get trip"
+
+'Not authorized as an administrator.'
+app/controllers/users_controller.rb: authorize! :index, @user, :message => 'Not authorized as an administrator.'
+app/controllers/users_controller.rb: authorize! :show, @user, :message => 'Not authorized as an administrator.'
+app/controllers/users_controller.rb: authorize! :update, @user, :message => 'Not authorized as an administrator.'
+app/controllers/users_controller.rb: authorize! :destroy, @user, :message => 'Not authorized as an administrator.'
+
+"User updated."
+app/controllers/users_controller.rb: redirect_to users_path, :notice => "User updated."
+
+"Unable to update user."
+app/controllers/users_controller.rb: redirect_to users_path, :alert => "Unable to update user."
+
+"User deleted."
+app/controllers/users_controller.rb: redirect_to users_path, :notice => "User deleted."
+
+"Can't delete yourself."
+app/controllers/users_controller.rb: redirect_to users_path, :notice => "Can't delete yourself."
+
+'n/a'
+app/helpers/application_helper.rb: return 'n/a' unless dist_in_meters
+app/helpers/application_helper.rb: return 'n/a' unless time_in_seconds
+
+"less than 1 block"
+app/helpers/application_helper.rb: dist_str = "less than 1 block"
+
+"about 2 blocks"
+app/helpers/application_helper.rb: dist_str = "about 2 blocks"
+
+"about 4 blocks"
+app/helpers/application_helper.rb: dist_str = "about 4 blocks"
+
+"%.2f miles"
+app/helpers/application_helper.rb: dist_str = "%.2f miles" % [miles]
+
+' '
+app/helpers/application_helper.rb: time_string << I18n.translate(:hour, count: hours)  + ' '
+app/models/trip.rb: self.trip_datetime = DateTime.strptime([@trip_date, @trip_time, DateTime.current.zone].join(' '),
+app/models/user.rb: elems.compact.join(' ')
+app/views/devise/shared/_links.html.haml: - links << link_to( new_session_path(resource_name)) {content_tag(:i, nil, {class: 'icon icon-signin'}) + ' ' + t(:log_in)}
+app/views/devise/shared/_links.html.haml: - links << link_to( new_registration_path(resource_name)) {content_tag(:i, nil, {class: 'icon icon-edit'}) + ' ' + t(:sign_up)}
+app/views/devise/shared/_links.html.haml: /   - links << link_to(new_password_path(resource_name)) { content_tag(:i, nil, {class: 'icon icon-info-sign'}) + ' ' + t(:forgot_your_password)}
+app/views/trips/_transit_details.html.haml: %p= leg['mode'] + ' ' + leg['route'] + " to " + leg['to']['name']
+app/views/trips/_trip_summary_header.html.haml: .span9.offset3.trip_summary_text= t(:arrive_at) + ' ' + itinerary.end_time.in_time_zone.strftime('%I:%M %p')
+app/views/trips/_trip_summary_header.html.haml: .span9.offset3.trip_summary_text= t(:depart_at) + ' ' + itinerary.start_time.in_time_zone.strftime('%I:%M %p')
+
+"<i class='icon-ok'></i>"
+app/helpers/application_helper.rb: return "<i class='icon-ok'></i>".html_safe
+
+'N'
+app/helpers/application_helper.rb: #return val.nil? ? 'N' : val == true ? 'Y' : 'N'
+app/helpers/application_helper.rb: #return val.nil? ? 'N' : val == true ? 'Y' : 'N'
+
+'Y'
+app/helpers/application_helper.rb: #return val.nil? ? 'N' : val == true ? 'Y' : 'N'
+
+"%I:%M %p %b %d %Y"
+app/helpers/application_helper.rb: return datetime.strftime("%I:%M %p %b %d %Y") unless datetime.nil?
+
+"%b %d %Y"
+app/helpers/application_helper.rb: return date.strftime("%b %d %Y") unless date.nil?
+
+"%I:%M"
+app/helpers/application_helper.rb: return time.strftime("%I:%M") unless time.nil?
+
+'transit'
+app/helpers/application_helper.rb: if mode == 'transit'
+app/helpers/application_helper.rb: if mode == 'transit'
+lib/trip_planner.rb: trip_itinerary['mode'] = 'transit'
+
+'paratransit'
+app/helpers/application_helper.rb: elsif mode == 'paratransit'
+app/helpers/application_helper.rb: elsif mode == 'paratransit'
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+
+'taxi'
+app/helpers/application_helper.rb: elsif mode == 'taxi'
+app/helpers/application_helper.rb: elsif mode == 'taxi'
+lib/trip_planner.rb: trip_itinerary['mode'] = 'taxi'
+
+'icon-bus-sign'
+app/helpers/application_helper.rb: icon_name = 'icon-bus-sign'
+
+'icon-truck-sign'
+app/helpers/application_helper.rb: icon_name = 'icon-truck-sign'
+
+'icon-taxi-sign'
+app/helpers/application_helper.rb: icon_name = 'icon-taxi-sign'
+
+"alert alert-error alert-block"
+app/helpers/application_helper.rb: <div class="alert alert-error alert-block">
+
+"button"
+app/helpers/application_helper.rb: <button type="button" class="close" data-dismiss="alert">&#215;</button>
+app/views/users/index.html.haml: %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change role
+
+"close"
+app/helpers/application_helper.rb: <button type="button" class="close" data-dismiss="alert">&#215;</button>
+
+"alert"
+app/helpers/application_helper.rb: <button type="button" class="close" data-dismiss="alert">&#215;</button>
+app/views/layouts/_messages.html.haml: %a.close{"data-dismiss" => "alert"} ×
+app/views/trips/new.html.haml: %a.close{"data-dismiss" => "alert"} ×
+
+'.'
+app/helpers/application_helper.rb: branded_key = [brand, key].join('.')
+
+"key: #{key} not found: #{e.inspect}"
+app/helpers/application_helper.rb: # Rails.logger.info "key: #{key} not found: #{e.inspect}"
+
+' if parts=='
+app/helpers/application_helper.rb: parts = '' if parts=='/'
+
+"/#{locale}#{parts}"
+app/helpers/application_helper.rb: newpath = "/#{locale}#{parts}"
+
+"/#{I18n.locale}#{path}"
+app/helpers/application_helper.rb: (newpath == "/#{I18n.locale}#{path}") or
+
+"/#{I18n.locale}"
+app/helpers/application_helper.rb: (newpath == "/#{I18n.locale}")
+
+"donotreply@julianjray.com"
+app/mailers/user_mailer.rb: default from: "donotreply@julianjray.com"
+
+"1-Click buddy request from #{@from_email}"
+app/mailers/user_mailer.rb: mail(to: @to_email, subject: "1-Click buddy request from #{@from_email}")
+
+"You've already asked them to be a buddy."
+app/models/buddy_relationship.rb: validates :email_address, uniqueness: {scope: :traveler_id, message: "You've already asked them to be a buddy." }
+
+"You can't be your own buddy."
+app/models/buddy_relationship.rb: record.errors.add(attr, "You can't be your own buddy.") if value == record.traveler.email
+
+'pending'
+app/models/buddy_relationship.rb: scope :pending, where(status: 'pending')
+app/models/buddy_relationship.rb: status == 'pending'
+app/models/user.rb: b = BuddyRelationship.new(email_address: email_address, status: 'pending')
+app/models/user.rb: buddy_by_status? email_address, 'pending'
+
+'confirmed'
+app/models/buddy_relationship.rb: scope :confirmed, where(status: 'confirmed')
+app/models/buddy_relationship.rb: status == 'confirmed'
+app/models/buddy_relationship.rb: self.update_attribute(:status, 'confirmed')
+app/models/user.rb: buddy_by_status? email_address, 'confirmed'
+
+"status != 'declined'"
+app/models/buddy_relationship.rb: scope :not_declined, where("status != 'declined'")
+
+'declined'
+app/models/buddy_relationship.rb: self.update_attribute(:status, 'declined')
+
+'WALK'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+app/views/trips/_transit_details.html.haml: -if leg['mode'] == 'WALK'
+
+'travelcon-walk'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'TRAM'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'travelcon-subway'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'SUBWAY'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'RAIL'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'travelcon-train'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'BUS'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'travelcon-bus'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+app/models/itinerary.rb: @icon_dictionary.default = 'travelcon-bus'
+
+'FERRY'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'travelcon-boat'
+app/models/itinerary.rb: @icon_dictionary = {'WALK' => 'travelcon-walk', 'TRAM' => 'travelcon-subway', 'SUBWAY' => 'travelcon-subway', 'RAIL' => 'travelcon-train', 'BUS' => 'travelcon-bus', 'FERRY' => 'travelcon-boat'}
+
+'DISTINCT trip_id'
+app/models/itinerary.rb: select('DISTINCT trip_id').where('status <> 200').order('trip_id')
+
+'status <> 200'
+app/models/itinerary.rb: select('DISTINCT trip_id').where('status <> 200').order('trip_id')
+
+'trip_id'
+app/models/itinerary.rb: select('DISTINCT trip_id').where('status <> 200').order('trip_id')
+
+'data'
+app/models/place.rb: self.lat = result[0]['data']['geometry']['location']['lat']
+app/models/place.rb: self.lon = result[0]['data']['geometry']['location']['lng']
+app/models/place.rb: self.address = result[0]['data']['formatted_address']
+
+'geometry'
+app/models/place.rb: self.lat = result[0]['data']['geometry']['location']['lat']
+app/models/place.rb: self.lon = result[0]['data']['geometry']['location']['lng']
+
+'location'
+app/models/place.rb: self.lat = result[0]['data']['geometry']['location']['lat']
+app/models/place.rb: self.lon = result[0]['data']['geometry']['location']['lng']
+
+'lat'
+app/models/place.rb: self.lat = result[0]['data']['geometry']['location']['lat']
+
+'lng'
+app/models/place.rb: self.lon = result[0]['data']['geometry']['location']['lng']
+
+'formatted_address'
+app/models/place.rb: self.address = result[0]['data']['formatted_address']
+
+'chronic'
+app/models/trip.rb: require 'chronic'
+
+"sequence=0"
+app/models/trip.rb: has_one :from_place, class_name: TripPlace, conditions: "sequence=0"
+
+"sequence=1"
+app/models/trip.rb: has_one :to_place, class_name: TripPlace, conditions: "sequence=1"
+
+'user_id'
+app/models/trip.rb: belongs_to :owner, foreign_key: 'user_id', class_name: User
+app/models/trip_place.rb: update_attributes user_place.attributes.except('id', 'user_id', 'created_at', 'updated_at')
+
+'status=200 AND hidden=false'
+app/models/trip.rb: has_many :valid_itineraries, conditions: 'status=200 AND hidden=false', class_name: 'Itinerary'
+
+'Itinerary'
+app/models/trip.rb: has_many :valid_itineraries, conditions: 'status=200 AND hidden=false', class_name: 'Itinerary'
+app/models/trip.rb: has_many :hidden_itineraries, conditions: 'status=200 AND hidden=true', class_name: 'Itinerary'
+
+'status=200 AND hidden=true'
+app/models/trip.rb: has_many :hidden_itineraries, conditions: 'status=200 AND hidden=true', class_name: 'Itinerary'
+app/models/trip.rb: joins(:itineraries).where('status=200 AND hidden=true').uniq
+
+'created_at > ?'
+app/models/trip.rb: #scope :recent, lambda {|date| where('created_at > ?', date.beginning_of_day) unless date.nil? }
+
+'user_id is NULL'
+app/models/trip.rb: scope :anonymous, where('user_id is NULL')
+
+"created_at > ? AND created_at < ?"
+app/models/trip.rb: scope :created_between, lambda {|from_day, to_day| where("created_at > ? AND created_at < ?", from_day.at_beginning_of_day, to_day.tomorrow.at_beginning_of_day) }
+
+'id in (?)'
+app/models/trip.rb: where('id in (?)', ids)
+
+"%m/%d/%Y"
+app/models/trip.rb: @trip_date = d.strftime("%m/%d/%Y")
+
+"parsing date #{@trip_date}"
+app/models/trip.rb: Rails.logger.warn "parsing date #{@trip_date}"
+
+"%H:%M %p"
+app/models/trip.rb: Time.strptime(@trip_time, "%H:%M %p")
+
+"parsing time #{@trip_time}"
+app/models/trip.rb: Rails.logger.warn "parsing time #{@trip_time}"
+
+'%m/%d/%Y %H:%M %p %z'
+app/models/trip.rb: '%m/%d/%Y %H:%M %p %z')
+
+"write_trip_datetime #{@trip_date} #{@trip_time}"
+app/models/trip.rb: Rails.logger.warn "write_trip_datetime #{@trip_date} #{@trip_time}"
+
+"arrive_by"
+app/models/trip.rb: arrive_by = arrive_depart.index("arrive_by") ? "true" : "false"
+
+"true"
+app/models/trip.rb: arrive_by = arrive_depart.index("arrive_by") ? "true" : "false"
+
+"false"
+app/models/trip.rb: arrive_by = arrive_depart.index("arrive_by") ? "true" : "false"
+
+'status'
+app/models/trip.rb: itineraries << Itinerary.new('status'=>response['id'], 'message'=>response['msg'])
+app/models/trip.rb: self.itineraries << Itinerary.new('status'=>500, 'message'=>response)
+app/models/trip.rb: self.itineraries << Itinerary.new('status'=>500, 'message'=>response)
+lib/trip_planner.rb: trip_itinerary['status'] = 200
+lib/trip_planner.rb: if fare['status'] != "OK"
+lib/trip_planner.rb: if businesses['status'] != "OK"
+lib/trip_planner.rb: trip_itinerary['status'] = 200
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+
+'id'
+app/models/trip.rb: itineraries << Itinerary.new('status'=>response['id'], 'message'=>response['msg'])
+app/models/trip_place.rb: update_attributes user_place.attributes.except('id', 'user_id', 'created_at', 'updated_at')
+lib/trip_planner.rb: return false, {'id'=>500, 'msg'=>e.to_s}
+lib/trip_planner.rb: return false, {'id'=>resp.code.to_i, 'msg'=>resp.message}
+lib/trip_planner.rb: return false, {'id'=>500, 'msg'=>e.to_s}
+lib/trip_planner.rb: return false, {'id'=>500, 'msg'=>e.to_s}
+
+'message'
+app/models/trip.rb: itineraries << Itinerary.new('status'=>response['id'], 'message'=>response['msg'])
+app/models/trip.rb: self.itineraries << Itinerary.new('status'=>500, 'message'=>response)
+app/models/trip.rb: self.itineraries << Itinerary.new('status'=>500, 'message'=>response)
+lib/trip_planner.rb: trip_itinerary['message'] = itinerary[1]['businesses']
+
+'msg'
+app/models/trip.rb: itineraries << Itinerary.new('status'=>response['id'], 'message'=>response['msg'])
+lib/trip_planner.rb: return false, {'id'=>500, 'msg'=>e.to_s}
+lib/trip_planner.rb: return false, {'id'=>resp.code.to_i, 'msg'=>resp.message}
+lib/trip_planner.rb: return false, {'id'=>500, 'msg'=>e.to_s}
+lib/trip_planner.rb: return false, {'id'=>500, 'msg'=>e.to_s}
+
+'awesome_print'
+app/models/trip_place.rb: require 'awesome_print'
+
+'trip_places'
+app/models/trip_place.rb: self.table_name = 'trip_places'
+
+"Address is required"
+app/models/trip_place.rb: errors.add :nongeocoded_address, "Address is required"
+app/models/trip_place.rb: errors.add :address, "Address is required"
+
+"No trip, just using place as is: #{self.inspect}"
+app/models/trip_place.rb: # puts "No trip, just using place as is: #{self.inspect}"
+
+"No trip owner, just using place as is:\n#{trip.inspect}\n#{self.inspect}"
+app/models/trip_place.rb: # puts "No trip owner, just using place as is:\n#{trip.inspect}\n#{self.inspect}"
+
+'created_at'
+app/models/trip_place.rb: update_attributes user_place.attributes.except('id', 'user_id', 'created_at', 'updated_at')
+
+'updated_at'
+app/models/trip_place.rb: update_attributes user_place.attributes.except('id', 'user_id', 'created_at', 'updated_at')
+
+"buddy_relationships.status='confirmed'"
+app/models/user.rb: has_many :buddies, class_name: User, through: :buddy_relationships, conditions: "buddy_relationships.status='confirmed'"
+app/models/user.rb: has_many :travelers, class_name: User, through: :traveler_relationships, conditions: "buddy_relationships.status='confirmed'"
+
+'user_places'
+app/models/user_place.rb: self.table_name = 'user_places'
+
+'../boot'
+config/application.rb: require File.expand_path('../boot', __FILE__)
+
+'rails/all'
+config/application.rb: require 'rails/all'
+
+'spec/factories'
+config/application.rb: g.fixture_replacement :factory_girl, dir: 'spec/factories'
+
+"rake -D time"
+config/application.rb: # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+
+'Eastern Time (US & Canada)'
+config/application.rb: config.time_zone = 'Eastern Time (US & Canada)'
+
+'my'
+config/application.rb: # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+
+'locales'
+config/application.rb: # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+
+'*.{rb,yml}'
+config/application.rb: # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+
+"utf-8"
+config/application.rb: config.encoding = "utf-8"
+config/environments/development.rb: config.action_mailer.default :charset => "utf-8"
+config/environments/production.rb: config.action_mailer.default :charset => "utf-8"
+
+'1.1'
+config/application.rb: config.assets.version = '1.1'
+
+'rubygems'
+config/boot.rb: require 'rubygems'
+
+'BUNDLE_GEMFILE'
+config/boot.rb: ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+config/boot.rb: require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+
+'../../Gemfile'
+config/boot.rb: ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+
+'bundler/setup'
+config/boot.rb: require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+
+'../application'
+config/environment.rb: require File.expand_path('../application', __FILE__)
+
+'localhost:3000'
+config/environments/development.rb: config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+'example.com'
+config/environments/production.rb: config.action_mailer.default_url_options = { :host => 'example.com' }
+config/environments/test.rb: config.action_mailer.default_url_options = { :host => 'example.com' }
+
+"scratch space"
+config/environments/test.rb: # your test database is "scratch space" for the test suite and is wiped
+
+"public, max-age=3600"
+config/environments/test.rb: config.static_cache_control = "public, max-age=3600"
+
+'re using but don'
+config/initializers/backtrace_silencers.rb: # You can add backtrace silencers for libraries that you're using but don't wish to see in your backtraces.
+
+"from"
+config/initializers/devise.rb: # note that it will be overwritten if you use your own mailer class with default "from" parameter.
+
+"please-change-me-at-config-initializers-devise@example.com"
+config/initializers/devise.rb: config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+
+"Devise::Mailer"
+config/initializers/devise.rb: # config.mailer = "Devise::Mailer"
+
+'devise/orm/active_record'
+config/initializers/devise.rb: require 'devise/orm/active_record'
+
+"Application"
+config/initializers/devise.rb: # The realm used in Http Basic Authentication. "Application" by default.
+config/initializers/devise.rb: # config.http_authentication_realm = "Application"
+
+"84dc8dfb2484ff2f45d219d20c29a9d57a5a6ea5b33cdb0fe6803f048e9d7cf25579f5e977658981b7bb30b52b55e8877c1ca6dcb198144c94428f6f9bb6f74c"
+config/initializers/devise.rb: # config.pepper = "84dc8dfb2484ff2f45d219d20c29a9d57a5a6ea5b33cdb0fe6803f048e9d7cf25579f5e977658981b7bb30b52b55e8877c1ca6dcb198144c94428f6f9bb6f74c"
+
+'t put a too small interval or your users won'
+config/initializers/devise.rb: # Don't put a too small interval or your users won't have the time to
+
+"sessions/new"
+config/initializers/devise.rb: # Turn scoped views on. Before rendering "sessions/new", it will first check for
+
+"users/sessions/new"
+config/initializers/devise.rb: # "users/sessions/new". It's turned off by default because it's slower if you
+
+'s turned off by default because it'
+config/initializers/devise.rb: # "users/sessions/new". It's turned off by default because it's slower if you
+
+"*/*"
+config/initializers/devise.rb: # The "*/*" below is required to match Internet Explorer requests.
+config/initializers/devise.rb: # config.navigational_formats = ["*/*", :html]
+
+'APP_ID'
+config/initializers/devise.rb: # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+
+'APP_SECRET'
+config/initializers/devise.rb: # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+
+'user,public_repo'
+config/initializers/devise.rb: # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+
+"/my_engine"
+config/initializers/devise.rb: #     mount MyEngine, at: "/my_engine"
+
+"/my_engine/users/auth"
+config/initializers/devise.rb: # config.omniauth_path_prefix = "/my_engine/users/auth"
+
+'\1en'
+config/initializers/inflections.rb: #   inflect.plural /^(ox)$/i, '\1en'
+
+'\1'
+config/initializers/inflections.rb: #   inflect.singular /^(ox)en/i, '\1'
+
+'person'
+config/initializers/inflections.rb: #   inflect.irregular 'person', 'people'
+
+'people'
+config/initializers/inflections.rb: #   inflect.irregular 'person', 'people'
+
+'RESTful'
+config/initializers/inflections.rb: #   inflect.acronym 'RESTful'
+
+"text/richtext"
+config/initializers/mime_types.rb: # Mime::Type.register "text/richtext", :rtf
+
+"text/html"
+config/initializers/mime_types.rb: # Mime::Type.register_alias "text/html", :iphone
+
+'BRAND'
+config/initializers/oneclick.rb: Oneclick::Application.config.brand = ENV['BRAND'] || 'arc'
+config/initializers/oneclick.rb: case ENV['BRAND'] || 'arc'
+
+'arc'
+config/initializers/oneclick.rb: Oneclick::Application.config.brand = ENV['BRAND'] || 'arc'
+config/initializers/oneclick.rb: case ENV['BRAND'] || 'arc'
+config/initializers/oneclick.rb: when 'arc'
+
+'administrative_area:GA|country:US'
+config/initializers/oneclick.rb: Oneclick::Application.config.geocoder_components = 'administrative_area:GA|country:US'
+
+'broward'
+config/initializers/oneclick.rb: when 'broward'
+
+'administrative_area:FL|country:US'
+config/initializers/oneclick.rb: Oneclick::Application.config.geocoder_components = 'administrative_area:FL|country:US'
+
+'yata'
+config/initializers/oneclick.rb: when 'yata'
+
+'administrative_area:PA|country:US'
+config/initializers/oneclick.rb: Oneclick::Application.config.geocoder_components = 'administrative_area:PA|country:US'
+
+'552e9e74a1794c6d92dffd9e7790e2ca47ba207d2c220c07d78cb9ddac8cc46d4c83cf4b21577cede4e0e98af4d975b68b9885a074faa7322ff0abbb66938458'
+config/initializers/secret_token.rb: Oneclick::Application.config.secret_token = '552e9e74a1794c6d92dffd9e7790e2ca47ba207d2c220c07d78cb9ddac8cc46d4c83cf4b21577cede4e0e98af4d975b68b9885a074faa7322ff0abbb66938458'
+
+'_oneclick_session'
+config/initializers/session_store.rb: Oneclick::Application.config.session_store :cookie_store, key: '_oneclick_session'
+
+"rails generate session_migration"
+config/initializers/session_store.rb: # (create the session table with "rails generate session_migration")
+
+"Placeholder"
+config/initializers/simple_form.rb: # You can also pass a string as f.input :placeholder => "Placeholder"
+
+'btn'
+config/initializers/simple_form.rb: config.button_class = 'btn'
+
+'alert alert-error'
+config/initializers/simple_form.rb: config.error_notification_class = 'alert alert-error'
+
+"#{required} #{label}"
+config/initializers/simple_form.rb: # config.label_text = lambda { |label, required| "#{required} #{label}" }
+
+'control-label'
+config/initializers/simple_form.rb: config.label_class = 'control-label'
+
+'div'
+config/initializers/simple_form.rb: b.wrapper :append, tag: 'div', class: 'controls' do |input|
+config/initializers/simple_form.rb: input.wrapper tag: 'div', class: 'input-append span4' do |append|
+config/initializers/simple_form_bootstrap.rb: config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+config/initializers/simple_form_bootstrap.rb: b.wrapper :tag => 'div', :class => 'controls' do |ba|
+config/initializers/simple_form_bootstrap.rb: config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+config/initializers/simple_form_bootstrap.rb: b.wrapper :tag => 'div', :class => 'controls' do |input|
+config/initializers/simple_form_bootstrap.rb: input.wrapper :tag => 'div', :class => 'input-prepend' do |prepend|
+config/initializers/simple_form_bootstrap.rb: config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+config/initializers/simple_form_bootstrap.rb: b.wrapper :tag => 'div', :class => 'controls' do |input|
+config/initializers/simple_form_bootstrap.rb: input.wrapper :tag => 'div', :class => 'input-append' do |append|
+
+'controls'
+config/initializers/simple_form.rb: b.wrapper :append, tag: 'div', class: 'controls' do |input|
+config/initializers/simple_form_bootstrap.rb: b.wrapper :tag => 'div', :class => 'controls' do |ba|
+config/initializers/simple_form_bootstrap.rb: b.wrapper :tag => 'div', :class => 'controls' do |input|
+config/initializers/simple_form_bootstrap.rb: b.wrapper :tag => 'div', :class => 'controls' do |input|
+
+'input-append span4'
+config/initializers/simple_form.rb: input.wrapper tag: 'div', class: 'input-append span4' do |append|
+
+'span'
+config/initializers/simple_form.rb: input.use :hint,  wrap_with: { tag: 'span', class: 'help-block' }
+config/initializers/simple_form.rb: input.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
+config/initializers/simple_form_bootstrap.rb: ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+config/initializers/simple_form_bootstrap.rb: input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
+config/initializers/simple_form_bootstrap.rb: input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+config/initializers/simple_form_bootstrap.rb: input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
+config/initializers/simple_form_bootstrap.rb: input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+
+'help-block'
+config/initializers/simple_form.rb: input.use :hint,  wrap_with: { tag: 'span', class: 'help-block' }
+config/initializers/simple_form_bootstrap.rb: ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+config/initializers/simple_form_bootstrap.rb: input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
+config/initializers/simple_form_bootstrap.rb: input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
+
+'help-inline'
+config/initializers/simple_form.rb: input.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
+config/initializers/simple_form_bootstrap.rb: ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+config/initializers/simple_form_bootstrap.rb: input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+config/initializers/simple_form_bootstrap.rb: input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
+
+'control-group'
+config/initializers/simple_form_bootstrap.rb: config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+
+'error'
+config/initializers/simple_form_bootstrap.rb: config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+config/initializers/simple_form_bootstrap.rb: config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+config/initializers/simple_form_bootstrap.rb: config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+lib/trip_planner.rb: if result.has_key? 'error'
+lib/trip_planner.rb: return false, result['error']
+
+'p'
+config/initializers/simple_form_bootstrap.rb: ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+
+"control-group"
+config/initializers/simple_form_bootstrap.rb: config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+config/initializers/simple_form_bootstrap.rb: config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
+
+'input-prepend'
+config/initializers/simple_form_bootstrap.rb: input.wrapper :tag => 'div', :class => 'input-prepend' do |prepend|
+
+'input-append'
+config/initializers/simple_form_bootstrap.rb: input.wrapper :tag => 'div', :class => 'input-append' do |append|
+
+'smtp.gmail.com'
+config/initializers/smtp_mail.rb: :address              => 'smtp.gmail.com',
+
+'gmail.com'
+config/initializers/smtp_mail.rb: :domain               => 'gmail.com',
+
+'oneclick.arc.camsys'
+config/initializers/smtp_mail.rb: :user_name            => 'oneclick.arc.camsys',
+
+'CatDogMonkey'
+config/initializers/smtp_mail.rb: :password             => 'CatDogMonkey',
+
+'plain'
+config/initializers/smtp_mail.rb: :authentication       => 'plain',
+
+'true'
+config/initializers/smtp_mail.rb: :enable_starttls_auto => 'true'
+
+'0.3.1'
+config/initializers/version.rb: Oneclick::Application.config.version = '0.3.1'
+
+"(:locale)"
+config/routes.rb: scope "(:locale)", locale: /en|es/ do
+
+'home#index'
+config/routes.rb: root :to => 'home#index'
+config/routes.rb: match '/' => 'home#index'
+
+"registrations"
+config/routes.rb: devise_for :users, controllers: {registrations: "registrations"}
+
+'revoke'
+config/routes.rb: get 'revoke'
+
+'accept'
+config/routes.rb: get 'accept'
+
+'decline'
+config/routes.rb: get 'decline'
+
+'assist'
+config/routes.rb: get 'assist'
+
+'desist'
+config/routes.rb: get 'desist'
+
+'hide'
+config/routes.rb: get 'hide'
+app/views/trips/_send_trip_by_email.html.haml: $('#send_trip_by_email').modal('hide')
+
+'unhide_all'
+config/routes.rb: get 'unhide_all'
+
+'details'
+config/routes.rb: get 'details'
+
+'email'
+config/routes.rb: post 'email'
+
+'/404'
+config/routes.rb: match '/404' => 'errors#error_404', as: 'error_404'
+
+'errors#error_404'
+config/routes.rb: match '/404' => 'errors#error_404', as: 'error_404'
+
+'error_404'
+config/routes.rb: match '/404' => 'errors#error_404', as: 'error_404'
+
+'/422'
+config/routes.rb: match '/422' => 'errors#error_422', as: 'error_422'
+
+'errors#error_422'
+config/routes.rb: match '/422' => 'errors#error_422', as: 'error_422'
+
+'error_422'
+config/routes.rb: match '/422' => 'errors#error_422', as: 'error_422'
+
+'/500'
+config/routes.rb: match '/500' => 'errors#error_500', as: 'error_500'
+
+'errors#error_500'
+config/routes.rb: match '/500' => 'errors#error_500', as: 'error_500'
+
+'error_500'
+config/routes.rb: match '/500' => 'errors#error_500', as: 'error_500'
+
+'/501'
+config/routes.rb: match '/501' => 'errors#error_501', as: 'error_501'
+
+'errors#error_501'
+config/routes.rb: match '/501' => 'errors#error_501', as: 'error_501'
+
+'error_501'
+config/routes.rb: match '/501' => 'errors#error_501', as: 'error_501'
+
+"home#index"
+config/routes.rb: root :to => "home#index"
+
+'icon-share-sign'
+lib/cs_helpers.rb: :plan_a_trip => 'icon-share-sign',
+
+'icon-key'
+lib/cs_helpers.rb: :log_in => 'icon-key',
+
+'icon-edit'
+lib/cs_helpers.rb: :create_an_account => 'icon-edit',
+
+'icon-map-marker'
+lib/cs_helpers.rb: :identify_places =>'icon-map-marker',
+
+'icon-cogs'
+lib/cs_helpers.rb: :travel_profile => 'icon-cogs',
+
+'icon-share-alt icon-flip-horizontal'
+lib/cs_helpers.rb: :previous_trips => 'icon-share-alt icon-flip-horizontal',
+
+'icon-question-sign'
+lib/cs_helpers.rb: :help_and_support => 'icon-question-sign',
+
+'icon-search'
+lib/cs_helpers.rb: :find_traveler => 'icon-search',
+
+'icon-user'
+lib/cs_helpers.rb: :create_traveler =>'icon-user',
+
+'icon-umbrella'
+lib/cs_helpers.rb: :agents_agencies => 'icon-umbrella',
+
+'icon-bar-chart'
+lib/cs_helpers.rb: :reports => 'icon-bar-chart'
+
+"Last 30 days"
+lib/time_filter_helper.rb: {:id => 0, :value => "Last 30 days", :parse_text_start => "29 days ago", :parse_text_end => "today", :is_day_duration => true},
+
+"29 days ago"
+lib/time_filter_helper.rb: {:id => 0, :value => "Last 30 days", :parse_text_start => "29 days ago", :parse_text_end => "today", :is_day_duration => true},
+
+"today"
+lib/time_filter_helper.rb: {:id => 0, :value => "Last 30 days", :parse_text_start => "29 days ago", :parse_text_end => "today", :is_day_duration => true},
+lib/time_filter_helper.rb: {:id => 1, :value => "Last 7 days", :parse_text_start => "6 days ago", :parse_text_end => "today", :is_day_duration => true},
+lib/time_filter_helper.rb: {:id => 2, :value => "Today", :parse_text_start => "today", :parse_text_end => "today", :is_day_duration => true},
+lib/time_filter_helper.rb: {:id => 2, :value => "Today", :parse_text_start => "today", :parse_text_end => "today", :is_day_duration => true},
+lib/time_filter_helper.rb: {:id => 4, :value => "This month", :parse_text_start => "today", :parse_text_end => "today", :is_day_duration => false},
+lib/time_filter_helper.rb: {:id => 4, :value => "This month", :parse_text_start => "today", :parse_text_end => "today", :is_day_duration => false},
+
+"Last 7 days"
+lib/time_filter_helper.rb: {:id => 1, :value => "Last 7 days", :parse_text_start => "6 days ago", :parse_text_end => "today", :is_day_duration => true},
+
+"6 days ago"
+lib/time_filter_helper.rb: {:id => 1, :value => "Last 7 days", :parse_text_start => "6 days ago", :parse_text_end => "today", :is_day_duration => true},
+
+"Today"
+lib/time_filter_helper.rb: {:id => 2, :value => "Today", :parse_text_start => "today", :parse_text_end => "today", :is_day_duration => true},
+
+"Yesterday"
+lib/time_filter_helper.rb: {:id => 3, :value => "Yesterday", :parse_text_start => "yesterday", :parse_text_end => "yesterday", :is_day_duration => true},
+
+"yesterday"
+lib/time_filter_helper.rb: {:id => 3, :value => "Yesterday", :parse_text_start => "yesterday", :parse_text_end => "yesterday", :is_day_duration => true},
+lib/time_filter_helper.rb: {:id => 3, :value => "Yesterday", :parse_text_start => "yesterday", :parse_text_end => "yesterday", :is_day_duration => true},
+
+"This month"
+lib/time_filter_helper.rb: {:id => 4, :value => "This month", :parse_text_start => "today", :parse_text_end => "today", :is_day_duration => false},
+
+"Last month"
+lib/time_filter_helper.rb: {:id => 5, :value => "Last month", :parse_text_start => "last month", :parse_text_end => "last month", :is_day_duration => false}
+
+"last month"
+lib/time_filter_helper.rb: {:id => 5, :value => "Last month", :parse_text_start => "last month", :parse_text_end => "last month", :is_day_duration => false}
+lib/time_filter_helper.rb: {:id => 5, :value => "Last month", :parse_text_start => "last month", :parse_text_end => "last month", :is_day_duration => false}
+
+'json'
+lib/trip_planner.rb: require 'json'
+
+'net/http'
+lib/trip_planner.rb: require 'net/http'
+
+"%I:%M%p"
+lib/trip_planner.rb: time = trip_datetime.strftime("%I:%M%p")
+
+"%Y-%m-%d"
+lib/trip_planner.rb: date = trip_datetime.strftime("%Y-%m-%d")
+
+'TRANSIT,WALK'
+lib/trip_planner.rb: mode = 'TRANSIT,WALK'
+
+"http://arc-otp-demo.camsys-apps.com"
+lib/trip_planner.rb: base_url = "http://arc-otp-demo.camsys-apps.com"
+
+"/opentripplanner-api-webapp/ws/plan?"
+lib/trip_planner.rb: url_options = "/opentripplanner-api-webapp/ws/plan?"
+
+"arriveBy="
+lib/trip_planner.rb: url_options += "arriveBy=" + arriveBy + "&time=" + time
+
+"&time="
+lib/trip_planner.rb: url_options += "arriveBy=" + arriveBy + "&time=" + time
+
+"&mode="
+lib/trip_planner.rb: url_options += "&mode=" + mode + "&date=" + date
+
+"&date="
+lib/trip_planner.rb: url_options += "&mode=" + mode + "&date=" + date
+
+"&toPlace="
+lib/trip_planner.rb: url_options += "&toPlace=" + to[0].to_s + ',' + to[1].to_s + "&fromPlace=" + from[0].to_s + ',' + from[1].to_s
+
+','
+lib/trip_planner.rb: url_options += "&toPlace=" + to[0].to_s + ',' + to[1].to_s + "&fromPlace=" + from[0].to_s + ',' + from[1].to_s
+lib/trip_planner.rb: url_options += "&toPlace=" + to[0].to_s + ',' + to[1].to_s + "&fromPlace=" + from[0].to_s + ',' + from[1].to_s
+lib/trip_planner.rb: fare_options = "&origin=" + to[0].to_s + ',' + to[1].to_s + "&destination=" + from[0].to_s + ',' + from[1].to_s
+lib/trip_planner.rb: fare_options = "&origin=" + to[0].to_s + ',' + to[1].to_s + "&destination=" + from[0].to_s + ',' + from[1].to_s
+
+"&fromPlace="
+lib/trip_planner.rb: url_options += "&toPlace=" + to[0].to_s + ',' + to[1].to_s + "&fromPlace=" + from[0].to_s + ',' + from[1].to_s
+
+"200"
+lib/trip_planner.rb: if resp.code != "200"
+
+'plan'
+lib/trip_planner.rb: return true, result['plan']
+
+'itineraries'
+lib/trip_planner.rb: plan['itineraries'].collect do |itinerary|
+
+'mode'
+lib/trip_planner.rb: trip_itinerary['mode'] = 'transit'
+lib/trip_planner.rb: trip_itinerary['mode'] = 'taxi'
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+app/views/trips/_legs_summary.html.haml: %i.icon-3x{class: Itinerary.get_mode_icon(leg['mode'])}
+app/views/trips/_transit_details.html.haml: %i.transit_itinerary_icons.mode_icon_formatting{class: Itinerary.get_mode_icon(leg['mode'])}
+app/views/trips/_transit_details.html.haml: %p= leg['mode'] + ' ' + leg['route'] + " to " + leg['to']['name']
+app/views/trips/_transit_details.html.haml: -if leg['mode'] == 'WALK'
+app/views/trips/_trip_details_modal.html.haml: = render :partial => itinerary['mode']+'_details', :locals => { :itinerary => itinerary }
+
+'duration'
+lib/trip_planner.rb: trip_itinerary['duration'] = itinerary['duration'].to_f/1000
+lib/trip_planner.rb: trip_itinerary['duration'] = itinerary['duration'].to_f/1000
+lib/trip_planner.rb: trip_itinerary['duration'] = itinerary[0]['duration'].to_f
+lib/trip_planner.rb: trip_itinerary['duration'] = itinerary[0]['duration'].to_f
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+
+'walk_time'
+lib/trip_planner.rb: trip_itinerary['walk_time'] = itinerary['walkTime']
+lib/trip_planner.rb: trip_itinerary['walk_time'] = 0
+
+'walkTime'
+lib/trip_planner.rb: trip_itinerary['walk_time'] = itinerary['walkTime']
+
+'transit_time'
+lib/trip_planner.rb: trip_itinerary['transit_time'] = itinerary['transitTime']
+
+'transitTime'
+lib/trip_planner.rb: trip_itinerary['transit_time'] = itinerary['transitTime']
+
+'wait_time'
+lib/trip_planner.rb: trip_itinerary['wait_time'] = itinerary['waitingTime']
+
+'waitingTime'
+lib/trip_planner.rb: trip_itinerary['wait_time'] = itinerary['waitingTime']
+
+'start_time'
+lib/trip_planner.rb: trip_itinerary['start_time'] = Time.at((itinerary['startTime']).to_f/1000)
+
+'startTime'
+lib/trip_planner.rb: trip_itinerary['start_time'] = Time.at((itinerary['startTime']).to_f/1000)
+app/views/trips/_transit_details.html.haml: =duration_to_words((leg['endTime'].to_i - leg['startTime'].to_i)/1000)
+app/views/trips/_transit_details.html.haml: = Time.at(leg['startTime'].to_f/1000).in_time_zone.strftime('%I:%M %p') + ' to ' + Time.at(leg['endTime'].to_f/1000).in_time_zone.strftime('%I:%M %p')
+
+'end_time'
+lib/trip_planner.rb: trip_itinerary['end_time'] = Time.at((itinerary['endTime']).to_f/1000)
+
+'endTime'
+lib/trip_planner.rb: trip_itinerary['end_time'] = Time.at((itinerary['endTime']).to_f/1000)
+app/views/trips/_transit_details.html.haml: =duration_to_words((leg['endTime'].to_i - leg['startTime'].to_i)/1000)
+app/views/trips/_transit_details.html.haml: = Time.at(leg['startTime'].to_f/1000).in_time_zone.strftime('%I:%M %p') + ' to ' + Time.at(leg['endTime'].to_f/1000).in_time_zone.strftime('%I:%M %p')
+
+'transfers'
+lib/trip_planner.rb: trip_itinerary['transfers'] = itinerary['transfers']
+lib/trip_planner.rb: trip_itinerary['transfers'] = itinerary['transfers']
+
+'walk_distance'
+lib/trip_planner.rb: trip_itinerary['walk_distance'] = itinerary['walkDistance']
+lib/trip_planner.rb: trip_itinerary['walk_distance'] = 0
+
+'walkDistance'
+lib/trip_planner.rb: trip_itinerary['walk_distance'] = itinerary['walkDistance']
+
+'legs'
+lib/trip_planner.rb: trip_itinerary['legs'] = itinerary['legs']
+lib/trip_planner.rb: trip_itinerary['legs'] = itinerary['legs']
+
+'http://api.taxifarefinder.com/'
+lib/trip_planner.rb: base_url = 'http://api.taxifarefinder.com/'
+
+'?key=SIefr5akieS5'
+lib/trip_planner.rb: api_key = '?key=SIefr5akieS5'
+
+'&entity_handle=Atlanta'
+lib/trip_planner.rb: entity = '&entity_handle=Atlanta'
+
+'fare'
+lib/trip_planner.rb: task = 'fare'
+
+"&origin="
+lib/trip_planner.rb: fare_options = "&origin=" + to[0].to_s + ',' + to[1].to_s + "&destination=" + from[0].to_s + ',' + from[1].to_s
+
+"&destination="
+lib/trip_planner.rb: fare_options = "&origin=" + to[0].to_s + ',' + to[1].to_s + "&destination=" + from[0].to_s + ',' + from[1].to_s
+
+"OK"
+lib/trip_planner.rb: if fare['status'] != "OK"
+lib/trip_planner.rb: if businesses['status'] != "OK"
+
+'explanation'
+lib/trip_planner.rb: return false, fare['explanation']
+lib/trip_planner.rb: return false, businesses['explanation']
+
+'businesses'
+lib/trip_planner.rb: task = 'businesses'
+lib/trip_planner.rb: trip_itinerary['message'] = itinerary[1]['businesses']
+
+'cost'
+lib/trip_planner.rb: trip_itinerary['cost'] = itinerary[0]['total_fare']
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+lib/trip_planner.rb: {'mode' => 'paratransit', 'status' => 200, 'duration' => 55*60, 'cost' => 4.00}
+
+'total_fare'
+lib/trip_planner.rb: trip_itinerary['cost'] = itinerary[0]['total_fare']
+
+"t.html"
+script/cs/group-parse.rb: f = File.open("t.html")
+
+'|'
+script/cs/parse.rb: a = line.chomp.split('|')
+
+"\t"
+script/cs/parse.rb: puts [a[1], a[4]].join "\t"
+
+'tiny_tds'
+script/cs/transfer.rb: require 'tiny_tds'
+
+'mysql2'
+script/cs/transfer.rb: require 'mysql2'
+
+'sa'
+script/cs/transfer.rb: mssql = TinyTds::Client.new(:username => 'sa', :password => 'dev2468!', :host => 'haskind-cam')
+
+'dev2468!'
+script/cs/transfer.rb: mssql = TinyTds::Client.new(:username => 'sa', :password => 'dev2468!', :host => 'haskind-cam')
+
+'haskind-cam'
+script/cs/transfer.rb: mssql = TinyTds::Client.new(:username => 'sa', :password => 'dev2468!', :host => 'haskind-cam')
+
+'esp-sample.cvixngn88xdi.us-east-1.rds.amazonaws.com'
+script/cs/transfer.rb: mysql = Mysql2::Client.new(:host => 'esp-sample.cvixngn88xdi.us-east-1.rds.amazonaws.com', :username => "root", :password => 'quitparthorseget')
+
+"root"
+script/cs/transfer.rb: mysql = Mysql2::Client.new(:host => 'esp-sample.cvixngn88xdi.us-east-1.rds.amazonaws.com', :username => "root", :password => 'quitparthorseget')
+
+'quitparthorseget'
+script/cs/transfer.rb: mysql = Mysql2::Client.new(:host => 'esp-sample.cvixngn88xdi.us-east-1.rds.amazonaws.com', :username => "root", :password => 'quitparthorseget')
+
+"USE espsample;"
+script/cs/transfer.rb: puts mysql.query("USE espsample;")
+
+"select * from [ESPTransportation].[dbo].[tLookupService];"
+script/cs/transfer.rb: r = mssql.execute("select * from [ESPTransportation].[dbo].[tLookupService];")
+
+', '
+script/cs/transfer.rb: puts row.keys.join(', ')
+
+"INSERT INTO tLookupService (ServiceCode) values ('#{row['ServiceCode']}')"
+script/cs/transfer.rb: puts mysql.query("INSERT INTO tLookupService (ServiceCode) values ('#{row['ServiceCode']}')")
+
+"**/*.{rb,haml}"
+script/cs/translate.rb: Dir.glob("**/*.{rb,haml}").each do |d|
+
+'r'
+script/cs/translate.rb: File.open(d, 'r').each_line do |line|
+
+'[^'
+script/cs/translate.rb: line.scan(/(?:'[^']+')|(?:"[^"]+")/).each do |w|
+
+"[^"
+script/cs/translate.rb: line.scan(/(?:'[^']+')|(?:"[^"]+")/).each do |w|
+
+': '
+script/cs/translate.rb: s[w] << d + ': ' + line.strip
+
+"min-height: 124px;"
+app/views/admins/index.html.haml: %li.span6{:style => "min-height: 124px;"}
+
+'layouts/messages'
+app/views/devise/registrations/_buddies.html.haml: = render partial: 'layouts/messages'
+app/views/layouts/application.html.haml: = render 'layouts/messages'
+
+'form-inline'
+app/views/devise/registrations/_buddies.html.haml: = simple_form_for [current_user, @buddy_relationship], remote: true, html: { class: 'form-inline' } do |f|
+
+'btn btn-primary controls'
+app/views/devise/registrations/_buddies.html.haml: = button_tag type: :submit, class: 'btn btn-primary controls' do
+app/views/devise/registrations/edit.html.haml: = button_tag type: :submit, class: 'btn btn-primary controls' do
+app/views/devise/registrations/new.html.haml: = button_tag type: :submit, class: 'btn btn-primary controls' do
+app/views/devise/sessions/new.html.haml: = button_tag type: :submit, class: 'btn btn-primary controls' do
+app/views/trips/_form.html.haml: = f.button :submit, t(:plan_it), {class: 'btn btn-primary controls'}
+
+" ago"
+app/views/devise/registrations/_buddies.html.haml: %td.left= distance_of_time_in_words_to_now(buddy.email_sent) + " ago"
+
+"btn btn-mini btn-warning text-center"
+app/views/devise/registrations/_buddies.html.haml: = link_to revoke_user_buddy_relationship_path(current_user, buddy.id), remote: true, class: "btn btn-mini btn-warning text-center" do
+app/views/devise/registrations/_travelers.html.haml: = link_to decline_user_traveler_relationship_path(current_user, t.id), remote: true, class: "btn btn-mini btn-warning text-center" do
+
+'shared/parameterized_datatable_javascript'
+app/views/devise/registrations/_buddies.html.haml: = render partial: 'shared/parameterized_datatable_javascript', locals: { table_id: '#buddiesdatatable',
+app/views/devise/registrations/_travelers.html.haml: = render partial: 'shared/parameterized_datatable_javascript', locals: { table_id: '#travelersdatatable',
+
+'#buddiesdatatable'
+app/views/devise/registrations/_buddies.html.haml: = render partial: 'shared/parameterized_datatable_javascript', locals: { table_id: '#buddiesdatatable',
+
+'buddies'
+app/views/devise/registrations/_buddies.html.haml: object_plural: 'buddies',
+app/views/devise/registrations/edit.html.haml: = render partial: 'buddies'
+
+'buddy'
+app/views/devise/registrations/_buddies.html.haml: object_singular: 'buddy',
+
+"btn btn-mini btn-success text-center"
+app/views/devise/registrations/_travelers.html.haml: = link_to accept_user_traveler_relationship_path(current_user, t.id), remote: true, class: "btn btn-mini btn-success text-center" do
+app/views/shared/_trips_table.html.haml: = link_to details_trip_path(trip), {class: "btn btn-mini btn-success text-center"} do
+app/views/trips/details.html.haml: = link_to "#", {class: "btn btn-mini btn-success text-center"} do
+
+"btn btn-mini btn-primary text-center"
+app/views/devise/registrations/_travelers.html.haml: = link_to assist_user_traveler_relationship_path(current_user, t.id), class: "btn btn-mini btn-primary text-center" do
+
+'#travelersdatatable'
+app/views/devise/registrations/_travelers.html.haml: = render partial: 'shared/parameterized_datatable_javascript', locals: { table_id: '#travelersdatatable',
+
+'travelers'
+app/views/devise/registrations/_travelers.html.haml: object_plural: 'travelers',
+app/views/devise/registrations/edit.html.haml: = render partial: 'travelers'
+
+'traveler'
+app/views/devise/registrations/_travelers.html.haml: object_singular: 'traveler',
+
+"icon #{CsHelpers::ACTION_ICONS[:travel_profile]}"
+app/views/devise/registrations/edit.html.haml: %i{class: "icon #{CsHelpers::ACTION_ICONS[:travel_profile]}"}
+
+'#tab1'
+app/views/devise/registrations/edit.html.haml: %a{href: '#tab1', data: {toggle: 'tab'}}
+
+'tab'
+app/views/devise/registrations/edit.html.haml: %a{href: '#tab1', data: {toggle: 'tab'}}
+app/views/devise/registrations/edit.html.haml: %a{href: '#tab2', data: {toggle: 'tab'}}
+app/views/devise/registrations/edit.html.haml: %a{href: '#tab3', data: {toggle: 'tab'}}
+
+'#tab2'
+app/views/devise/registrations/edit.html.haml: %a{href: '#tab2', data: {toggle: 'tab'}}
+
+'#tab3'
+app/views/devise/registrations/edit.html.haml: %a{href: '#tab3', data: {toggle: 'tab'}}
+
+'form-horizontal'
+app/views/devise/registrations/edit.html.haml: = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-horizontal' }) do |f|
+app/views/devise/registrations/new.html.haml: = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal' }) do |f|
+app/views/devise/sessions/new.html.haml: = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal' }) do |f|
+app/views/trips/_form.html.haml: = simple_form_for(@trip, :html => {:class => 'form-horizontal' }) do |f|
+app/views/trips/_send_trip_by_email.html.haml: = simple_form_for :email, url: email_trip_path(trip), html: { class: 'form-horizontal',
+app/views/users/_user.html.haml: = simple_form_for user, :url => user_path(user), :html => {:method => :put, :class => 'form-horizontal' } do |f|
+
+"off"
+app/views/devise/registrations/edit.html.haml: = f.input :password, label: t(:password), :autocomplete => "off", :required => false
+
+'a#tab1'
+app/views/devise/registrations/edit.html.haml: $('a#tab1').click(function(e) {
+
+'show'
+app/views/devise/registrations/edit.html.haml: $(this).tab('show')
+app/views/devise/registrations/edit.html.haml: $(this).tab('show')
+app/views/devise/registrations/edit.html.haml: $(this).tab('show')
+
+'a#tab2'
+app/views/devise/registrations/edit.html.haml: $('a#tab2').click(function(e) {
+
+'a#tab3'
+app/views/devise/registrations/edit.html.haml: $('a#tab3').click(function(e) {
+
+'#buddies'
+app/views/devise/registrations/edit.html.haml: $('#buddies').on('ajax:success', function(e, response) {
+app/views/devise/registrations/edit.html.haml: $('#buddies').html(response)
+
+'ajax:success'
+app/views/devise/registrations/edit.html.haml: $('#buddies').on('ajax:success', function(e, response) {
+app/views/devise/registrations/edit.html.haml: $('#travelers').on('ajax:success', function(e, response) {
+
+'#travelers'
+app/views/devise/registrations/edit.html.haml: $('#travelers').on('ajax:success', function(e, response) {
+app/views/devise/registrations/edit.html.haml: $('#travelers').html(response)
+
+"devise/shared/links"
+app/views/devise/registrations/new.html.haml: = render "devise/shared/links"
+app/views/devise/sessions/new.html.haml: = render "devise/shared/links"
+
+'sessions'
+app/views/devise/shared/_links.html.haml: - if controller_name != 'sessions'
+
+'icon icon-signin'
+app/views/devise/shared/_links.html.haml: - links << link_to( new_session_path(resource_name)) {content_tag(:i, nil, {class: 'icon icon-signin'}) + ' ' + t(:log_in)}
+
+'registrations'
+app/views/devise/shared/_links.html.haml: - if devise_mapping.registerable? && controller_name != 'registrations'
+
+'icon icon-edit'
+app/views/devise/shared/_links.html.haml: - links << link_to( new_registration_path(resource_name)) {content_tag(:i, nil, {class: 'icon icon-edit'}) + ' ' + t(:sign_up)}
+
+'passwords'
+app/views/devise/shared/_links.html.haml: / - if devise_mapping.recoverable? && controller_name != 'passwords'
+
+'icon icon-info-sign'
+app/views/devise/shared/_links.html.haml: /   - links << link_to(new_password_path(resource_name)) { content_tag(:i, nil, {class: 'icon icon-info-sign'}) + ' ' + t(:forgot_your_password)}
+
+'confirmations'
+app/views/devise/shared/_links.html.haml: - if devise_mapping.confirmable? && controller_name != 'confirmations'
+
+"Didn't receive confirmation instructions?"
+app/views/devise/shared/_links.html.haml: - links << link_to( "Didn't receive confirmation instructions?", new_confirmation_path(resource_name))
+
+'unlocks'
+app/views/devise/shared/_links.html.haml: - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
+
+"Didn't receive unlock instructions?"
+app/views/devise/shared/_links.html.haml: - links << link_to( "Didn't receive unlock instructions?", new_unlock_path(resource_name))
+
+"Sign in with #{provider.to_s.titleize}"
+app/views/devise/shared/_links.html.haml: - links << link_to("Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider))
+
+' | '
+app/views/devise/shared/_links.html.haml: = links.map(&:html_safe).join(' | ').html_safe
+
+'font-size: 3em;'
+app/views/home/index.html.haml: %i.center{class: action[:icon], alt: action[:label], style: 'font-size: 3em;'}
+
+'text-align: left;'
+app/views/home/index.html.haml: .span9.actionlabel{style: 'text-align: left;'}
+
+'text-align: center;'
+app/views/layouts/_assisting.html.haml: %div{style: 'text-align: center;'}
+
+'display: inline-block'
+app/views/layouts/_assisting.html.haml: %div{style: 'display: inline-block'}
+
+'dropdown'
+app/views/layouts/_assisting.html.haml: %a.dropdown-toggle{data: {toggle: 'dropdown', target: '#'}}
+app/views/layouts/_navigation.html.haml: %a.dropdown-toggle{data: {toggle: 'dropdown', target: '#'}}
+app/views/reports/_subnav.html.haml: %a.dropdown-toggle{data: {toggle: 'dropdown', target: '#'}}
+app/views/trips/_form.html.haml: %a.add-on.btn.dropdown-toggle{data: {toggle: 'dropdown'}, href: '#'}>
+app/views/trips/_form.html.haml: %a.add-on.btn.dropdown-toggle{data: {toggle: 'dropdown'}, href: '#'}>
+
+'#'
+app/views/layouts/_assisting.html.haml: %a.dropdown-toggle{data: {toggle: 'dropdown', target: '#'}}
+app/views/layouts/_navigation.html.haml: %a.dropdown-toggle{data: {toggle: 'dropdown', target: '#'}}
+app/views/reports/_subnav.html.haml: %a.dropdown-toggle{data: {toggle: 'dropdown', target: '#'}}
+app/views/trips/_form.html.haml: %a.add-on.btn.dropdown-toggle{data: {toggle: 'dropdown'}, href: '#'}>
+app/views/trips/_form.html.haml: %a.add-on.btn.dropdown-toggle{data: {toggle: 'dropdown'}, href: '#'}>
+app/views/trips/_form.html.haml: $('#' + t.parents('ul').data('target')).val(t.data('value'))
+app/views/trips/show.html.haml: = link_to '#', {href: '#send_trip_by_email', class: "pull-right", data: {toggle: 'modal'}} do
+
+'font-size: 1.5em;'
+app/views/layouts/_assisting.html.haml: %i.icon.icon-compass{style: 'font-size: 1.5em;'}
+
+"Assisting #{assisted_user.email}"
+app/views/layouts/_assisting.html.haml: = "Assisting #{assisted_user.email}"
+
+'menu'
+app/views/layouts/_assisting.html.haml: %ul.dropdown-menu{role: 'menu'}
+app/views/layouts/_navigation.html.haml: %ul.dropdown-menu{role: 'menu'}
+app/views/reports/_subnav.html.haml: %ul.dropdown-menu{role: 'menu'}
+
+"alert alert-#{name == :notice ? "
+app/views/layouts/_messages.html.haml: %div{:class => "alert alert-#{name == :notice ? "success" : "error"} fade in"}
+
+" : "
+app/views/layouts/_messages.html.haml: %div{:class => "alert alert-#{name == :notice ? "success" : "error"} fade in"}
+
+"} fade in"
+app/views/layouts/_messages.html.haml: %div{:class => "alert alert-#{name == :notice ? "success" : "error"} fade in"}
+
+"data-dismiss"
+app/views/layouts/_messages.html.haml: %a.close{"data-dismiss" => "alert"} ×
+app/views/trips/_trip_details_modal.html.haml: %a{class: "button btn btn-mini btn-success", "data-dismiss" => "modal"}
+app/views/trips/_trip_details_modal.html.haml: =link_to hide_trip_path(itinerary), {"data-dismiss" => "modal",  class: "btn btn-mini btn-danger", remote: true} do
+app/views/trips/new.html.haml: %a.close{"data-dismiss" => "alert"} ×
+app/views/users/_user.html.haml: %a.close{"data-dismiss" => "modal"} ×
+app/views/users/_user.html.haml: %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+
+"flash_#{name}"
+app/views/layouts/_messages.html.haml: = content_tag :div, msg, :id => "flash_#{name}"
+
+'brand'
+app/views/layouts/_navigation.html.haml: = link_to t(:logotext), root_path, :class => 'brand'
+
+"collapse"
+app/views/layouts/_navigation.html.haml: %a.btn.btn-navbar{data: { toggle: "collapse",  target: ".nav-collapse"}}
+
+".nav-collapse"
+app/views/layouts/_navigation.html.haml: %a.btn.btn-navbar{data: { toggle: "collapse",  target: ".nav-collapse"}}
+
+"#{t(:welcome)}, #{current_user.welcome}"
+app/views/layouts/_navigation.html.haml: = "#{t(:welcome)}, #{current_user.welcome}"
+
+'delete'
+app/views/layouts/_navigation.html.haml: = link_to destroy_user_session_path, :method=>'delete' do
+
+'help'
+app/views/layouts/_navigation.html.haml: = link_to error_501_path, id: 'help' do
+
+"width=device-width, initial-scale=1.0"
+app/views/layouts/application.html.haml: %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+
+"viewport"
+app/views/layouts/application.html.haml: %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+
+"description"
+app/views/layouts/application.html.haml: %meta{:content => content_for?(:description) ? yield(:description) : t(:site_description), :name => "description"}
+app/views/layouts/email.html.haml: %meta{:content => content_for?(:description) ? yield(:description) : t(:site_description), :name => "description"}
+
+"application"
+app/views/layouts/application.html.haml: = stylesheet_link_tag "application", :media => "all"
+app/views/layouts/application.html.haml: = javascript_include_tag "application" # TODO This should go in footer
+
+"all"
+app/views/layouts/application.html.haml: = stylesheet_link_tag "application", :media => "all"
+app/views/layouts/application.html.haml: = stylesheet_link_tag brand, :media => "all"
+
+"https://www.google.com/jsapi"
+app/views/layouts/application.html.haml: = javascript_include_tag "https://www.google.com/jsapi"
+
+"#{controller_name} #{action_name}"
+app/views/layouts/application.html.haml: %body{:class => "#{controller_name} #{action_name}"}
+app/views/layouts/email.html.haml: %body{:class => "#{controller_name} #{action_name}"}
+
+'layouts/navigation'
+app/views/layouts/application.html.haml: = render 'layouts/navigation'
+
+"main"
+app/views/layouts/application.html.haml: #main{:role => "main"}
+
+'layouts/assisting'
+app/views/layouts/application.html.haml: = render 'layouts/assisting'
+
+"#{t(:version)} #{Rails.application.config.version}"
+app/views/layouts/application.html.haml: %span= "#{t(:version)} #{Rails.application.config.version}"
+
+'English'
+app/views/layouts/application.html.haml: = link_using_locale('English', 'en')
+
+'en'
+app/views/layouts/application.html.haml: = link_using_locale('English', 'en')
+
+'En Español'
+app/views/layouts/application.html.haml: = link_using_locale('En Español', 'es')
+
+'es'
+app/views/layouts/application.html.haml: = link_using_locale('En Español', 'es')
+
+"text/javascript"
+app/views/reports/_generic_report.html.haml: %script{:type => "text/javascript"}
+app/views/trips/_page_scripts.html.haml: %script{:type => "text/javascript"}
+
+'visualization'
+app/views/reports/_generic_report.html.haml: google.load('visualization', '1.0', {'packages':['corechart']});
+
+'1.0'
+app/views/reports/_generic_report.html.haml: google.load('visualization', '1.0', {'packages':['corechart']});
+
+'packages'
+app/views/reports/_generic_report.html.haml: google.load('visualization', '1.0', {'packages':['corechart']});
+
+'corechart'
+app/views/reports/_generic_report.html.haml: google.load('visualization', '1.0', {'packages':['corechart']});
+
+'string'
+app/views/reports/_generic_report.html.haml: chart_data.addColumn('string', 'Asset Type');
+
+'Asset Type'
+app/views/reports/_generic_report.html.haml: chart_data.addColumn('string', 'Asset Type');
+
+'number'
+app/views/reports/_generic_report.html.haml: chart_data.addColumn('number', 'Count');
+
+'Count'
+app/views/reports/_generic_report.html.haml: chart_data.addColumn('number', 'Count');
+
+'#{row.key}'
+app/views/reports/_generic_report.html.haml: chart_data.addRow(['#{row.key}', {v: #{row.count}, f: '#{number_to_human(row.count)}'}]);
+
+'#{number_to_human(row.count)}'
+app/views/reports/_generic_report.html.haml: chart_data.addRow(['#{row.key}', {v: #{row.count}, f: '#{number_to_human(row.count)}'}]);
+
+'none'
+app/views/reports/_generic_report.html.haml: legend : {position : 'none'},
+
+'Number'
+app/views/reports/_generic_report.html.haml: vAxis :  {title : 'Number'}
+
+'chart'
+app/views/reports/_generic_report.html.haml: chart = new google.visualization.AreaChart(document.getElementById('chart'));
+
+'time_filter_form'
+app/views/reports/_subnav.html.haml: = form_tag user_report_url(@report), :id => 'time_filter_form', :method => "get", :class => 'navbar-form form-inline pull-right' do
+app/views/trips/_index_subnav.html.haml: = form_tag trips_url, :id => 'time_filter_form', :method => "get", :class => 'navbar-form form-inline pull-right' do
+
+"get"
+app/views/reports/_subnav.html.haml: = form_tag user_report_url(@report), :id => 'time_filter_form', :method => "get", :class => 'navbar-form form-inline pull-right' do
+app/views/trips/_index_subnav.html.haml: = form_tag trips_url, :id => 'time_filter_form', :method => "get", :class => 'navbar-form form-inline pull-right' do
+
+'navbar-form form-inline pull-right'
+app/views/reports/_subnav.html.haml: = form_tag user_report_url(@report), :id => 'time_filter_form', :method => "get", :class => 'navbar-form form-inline pull-right' do
+app/views/trips/_index_subnav.html.haml: = form_tag trips_url, :id => 'time_filter_form', :method => "get", :class => 'navbar-form form-inline pull-right' do
+
+'margin-top:0px'
+app/views/reports/_subnav.html.haml: = select_tag(:time_filter_type, options_for_select(TimeFilterHelper::TIME_FILTERS.collect{|r| [r[:value], r[:id]]}, :selected => @time_filter_type), :style => 'margin-top:0px', :id => 'time_filter')
+app/views/trips/_index_subnav.html.haml: = select_tag(:time_filter_type, options_for_select(TimeFilterHelper::TIME_FILTERS.collect{|r| [r[:value], r[:id]]}, :selected => @time_filter_type), :style => 'margin-top:0px', :id => 'time_filter')
+
+'time_filter'
+app/views/reports/_subnav.html.haml: = select_tag(:time_filter_type, options_for_select(TimeFilterHelper::TIME_FILTERS.collect{|r| [r[:value], r[:id]]}, :selected => @time_filter_type), :style => 'margin-top:0px', :id => 'time_filter')
+app/views/trips/_index_subnav.html.haml: = select_tag(:time_filter_type, options_for_select(TimeFilterHelper::TIME_FILTERS.collect{|r| [r[:value], r[:id]]}, :selected => @time_filter_type), :style => 'margin-top:0px', :id => 'time_filter')
+
+'#time_filter'
+app/views/reports/_subnav.html.haml: $('#time_filter').change(function() {
+app/views/trips/_index_subnav.html.haml: $('#time_filter').change(function() {
+
+'#time_filter_form'
+app/views/reports/_subnav.html.haml: $('#time_filter_form').submit();
+app/views/trips/_index_subnav.html.haml: $('#time_filter_form').submit();
+
+'shared/trips_table'
+app/views/reports/_trips_report.html.haml: = render :partial => 'shared/trips_table', :locals => {:trips => @data}
+app/views/trips/index.html.haml: = render :partial => 'shared/trips_table', :locals => {:trips => @trips}
+
+'thumbnail'
+app/views/reports/index.html.haml: = render :partial => 'thumbnail', :locals => { :report => report }
+
+".thumbnail"
+app/views/reports/index.html.haml: $(".thumbnail").css('height', '');
+app/views/reports/index.html.haml: $(".thumbnail").css('overflow', '');
+app/views/trips/_page_scripts.html.haml: $(".thumbnail").css('height', '');
+app/views/trips/_page_scripts.html.haml: $(".thumbnail").css('overflow', '');
+app/views/trips/show.html.haml: $(".thumbnail").css('height', '');
+app/views/trips/show.html.haml: $(".thumbnail").css('overflow', '');
+
+'height'
+app/views/reports/index.html.haml: $(".thumbnail").css('height', '');
+app/views/trips/_page_scripts.html.haml: $(".thumbnail").css('height', '');
+app/views/trips/show.html.haml: $(".thumbnail").css('height', '');
+
+'overflow'
+app/views/reports/index.html.haml: $(".thumbnail").css('overflow', '');
+app/views/trips/_page_scripts.html.haml: $(".thumbnail").css('overflow', '');
+app/views/trips/show.html.haml: $(".thumbnail").css('overflow', '');
+
+'.thumbnail'
+app/views/reports/index.html.haml: make_same_height('.thumbnail');
+app/views/trips/_page_scripts.html.haml: make_same_height('.thumbnail');
+
+'subnav'
+app/views/reports/show.html.haml: = render 'subnav'
+
+'#datatable'
+app/views/shared/_datatable_javascript.html.haml: $('#datatable').dataTable( {
+
+"bFilter"
+app/views/shared/_datatable_javascript.html.haml: "bFilter" : false,
+app/views/shared/_parameterized_datatable_javascript.html.haml: "bFilter" : false,
+
+"sDom"
+app/views/shared/_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+app/views/shared/_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+
+"<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>"
+app/views/shared/_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+app/views/shared/_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+
+"sPaginationType"
+app/views/shared/_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+
+"bootstrap"
+app/views/shared/_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_datatable_javascript.html.haml: "bootstrap": {
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sPaginationType": "bootstrap",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "bootstrap": {
+
+"oLanguage"
+app/views/shared/_datatable_javascript.html.haml: "oLanguage": {
+app/views/shared/_datatable_javascript.html.haml: "oLanguage": {
+app/views/shared/_parameterized_datatable_javascript.html.haml: "oLanguage": {
+app/views/shared/_parameterized_datatable_javascript.html.haml: "oLanguage": {
+
+"sLengthMenu"
+app/views/shared/_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ records per page"
+app/views/shared/_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ records per page"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ #{object_plural} per page",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ #{object_plural} per page"
+
+"_MENU_ records per page"
+app/views/shared/_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ records per page"
+app/views/shared/_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ records per page"
+
+"sWrapper"
+app/views/shared/_datatable_javascript.html.haml: "sWrapper": "dataTables_wrapper form-inline"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sWrapper": "dataTables_wrapper form-inline"
+
+"dataTables_wrapper form-inline"
+app/views/shared/_datatable_javascript.html.haml: "sWrapper": "dataTables_wrapper form-inline"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sWrapper": "dataTables_wrapper form-inline"
+
+"iStart"
+app/views/shared/_datatable_javascript.html.haml: "iStart":         oSettings._iDisplayStart,
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iStart":         oSettings._iDisplayStart,
+
+"iEnd"
+app/views/shared/_datatable_javascript.html.haml: "iEnd":           oSettings.fnDisplayEnd(),
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iEnd":           oSettings.fnDisplayEnd(),
+
+"iLength"
+app/views/shared/_datatable_javascript.html.haml: "iLength":        oSettings._iDisplayLength,
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iLength":        oSettings._iDisplayLength,
+
+"iTotal"
+app/views/shared/_datatable_javascript.html.haml: "iTotal":         oSettings.fnRecordsTotal(),
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iTotal":         oSettings.fnRecordsTotal(),
+
+"iFilteredTotal"
+app/views/shared/_datatable_javascript.html.haml: "iFilteredTotal": oSettings.fnRecordsDisplay(),
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iFilteredTotal": oSettings.fnRecordsDisplay(),
+
+"iPage"
+app/views/shared/_datatable_javascript.html.haml: "iPage":          oSettings._iDisplayLength === -1 ?
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iPage":          oSettings._iDisplayLength === -1 ?
+
+"iTotalPages"
+app/views/shared/_datatable_javascript.html.haml: "iTotalPages":    oSettings._iDisplayLength === -1 ?
+app/views/shared/_parameterized_datatable_javascript.html.haml: "iTotalPages":    oSettings._iDisplayLength === -1 ?
+
+"fnInit"
+app/views/shared/_datatable_javascript.html.haml: "fnInit": function( oSettings, nPaging, fnDraw ) {
+app/views/shared/_parameterized_datatable_javascript.html.haml: "fnInit": function( oSettings, nPaging, fnDraw ) {
+
+'pagination'
+app/views/shared/_datatable_javascript.html.haml: $(nPaging).addClass('pagination').append(
+app/views/shared/_parameterized_datatable_javascript.html.haml: $(nPaging).addClass('pagination').append(
+
+'<ul>'
+app/views/shared/_datatable_javascript.html.haml: '<ul>'+
+app/views/shared/_parameterized_datatable_javascript.html.haml: '<ul>'+
+
+'<li class="prev disabled"><a href="#">&larr; '
+app/views/shared/_datatable_javascript.html.haml: '<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
+app/views/shared/_parameterized_datatable_javascript.html.haml: '<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
+
+'</a></li>'
+app/views/shared/_datatable_javascript.html.haml: '<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
+app/views/shared/_datatable_javascript.html.haml: $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+app/views/shared/_parameterized_datatable_javascript.html.haml: '<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+
+'<li class="next disabled"><a href="#">'
+app/views/shared/_datatable_javascript.html.haml: '<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
+app/views/shared/_parameterized_datatable_javascript.html.haml: '<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
+
+' &rarr; </a></li>'
+app/views/shared/_datatable_javascript.html.haml: '<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
+app/views/shared/_parameterized_datatable_javascript.html.haml: '<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
+
+'</ul>'
+app/views/shared/_datatable_javascript.html.haml: '</ul>'
+app/views/shared/_parameterized_datatable_javascript.html.haml: '</ul>'
+
+'a'
+app/views/shared/_datatable_javascript.html.haml: var els = $('a', nPaging);
+app/views/shared/_datatable_javascript.html.haml: oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
+app/views/shared/_parameterized_datatable_javascript.html.haml: var els = $('a', nPaging);
+app/views/shared/_parameterized_datatable_javascript.html.haml: oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
+
+'click.DT'
+app/views/shared/_datatable_javascript.html.haml: $(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
+app/views/shared/_datatable_javascript.html.haml: $(els[1]).bind( 'click.DT', { action: "next" }, fnClickHandler );
+app/views/shared/_parameterized_datatable_javascript.html.haml: $(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
+app/views/shared/_parameterized_datatable_javascript.html.haml: $(els[1]).bind( 'click.DT', { action: "next" }, fnClickHandler );
+
+"previous"
+app/views/shared/_datatable_javascript.html.haml: $(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
+app/views/shared/_parameterized_datatable_javascript.html.haml: $(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
+
+"next"
+app/views/shared/_datatable_javascript.html.haml: $(els[1]).bind( 'click.DT', { action: "next" }, fnClickHandler );
+app/views/shared/_parameterized_datatable_javascript.html.haml: $(els[1]).bind( 'click.DT', { action: "next" }, fnClickHandler );
+
+"fnUpdate"
+app/views/shared/_datatable_javascript.html.haml: "fnUpdate": function ( oSettings, fnDraw ) {
+app/views/shared/_parameterized_datatable_javascript.html.haml: "fnUpdate": function ( oSettings, fnDraw ) {
+
+'li:gt(0)'
+app/views/shared/_datatable_javascript.html.haml: $('li:gt(0)', an[i]).filter(':not(:last)').remove();
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:gt(0)', an[i]).filter(':not(:last)').remove();
+
+':not(:last)'
+app/views/shared/_datatable_javascript.html.haml: $('li:gt(0)', an[i]).filter(':not(:last)').remove();
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:gt(0)', an[i]).filter(':not(:last)').remove();
+
+'class="active"'
+app/views/shared/_datatable_javascript.html.haml: sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
+app/views/shared/_parameterized_datatable_javascript.html.haml: sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
+
+'<li '
+app/views/shared/_datatable_javascript.html.haml: $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+
+'><a href="#">'
+app/views/shared/_datatable_javascript.html.haml: $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+
+'li:last'
+app/views/shared/_datatable_javascript.html.haml: .insertBefore( $('li:last', an[i])[0] )
+app/views/shared/_datatable_javascript.html.haml: $('li:last', an[i]).addClass('disabled');
+app/views/shared/_datatable_javascript.html.haml: $('li:last', an[i]).removeClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: .insertBefore( $('li:last', an[i])[0] )
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:last', an[i]).addClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:last', an[i]).removeClass('disabled');
+
+'click'
+app/views/shared/_datatable_javascript.html.haml: .bind('click', function (e) {
+app/views/shared/_parameterized_datatable_javascript.html.haml: .bind('click', function (e) {
+app/views/trips/_form.html.haml: $('.trip_from_place_address a, .trip_to_place_address a').on('click', function(event) {
+
+'li:first'
+app/views/shared/_datatable_javascript.html.haml: $('li:first', an[i]).addClass('disabled');
+app/views/shared/_datatable_javascript.html.haml: $('li:first', an[i]).removeClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:first', an[i]).addClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:first', an[i]).removeClass('disabled');
+
+'disabled'
+app/views/shared/_datatable_javascript.html.haml: $('li:first', an[i]).addClass('disabled');
+app/views/shared/_datatable_javascript.html.haml: $('li:first', an[i]).removeClass('disabled');
+app/views/shared/_datatable_javascript.html.haml: $('li:last', an[i]).addClass('disabled');
+app/views/shared/_datatable_javascript.html.haml: $('li:last', an[i]).removeClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:first', an[i]).addClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:first', an[i]).removeClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:last', an[i]).addClass('disabled');
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('li:last', an[i]).removeClass('disabled');
+
+"table_id is #{table_id}"
+app/views/shared/_parameterized_datatable_javascript.html.haml: - Rails.logger.info "table_id is #{table_id}"
+
+'#{table_id}'
+app/views/shared/_parameterized_datatable_javascript.html.haml: $('#{table_id}').dataTable( {
+
+"bLengthChange"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "bLengthChange": #{bLengthChange},
+
+"_MENU_ #{object_plural} per page"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ #{object_plural} per page",
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sLengthMenu": "_MENU_ #{object_plural} per page"
+
+"sInfo"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sInfo": "Showing _START_ to _END_ of _TOTAL_ #{object_plural}"
+
+"Showing _START_ to _END_ of _TOTAL_ #{object_plural}"
+app/views/shared/_parameterized_datatable_javascript.html.haml: "sInfo": "Showing _START_ to _END_ of _TOTAL_ #{object_plural}"
+
+"anonymous"
+app/views/shared/_trips_table.html.haml: %td.left= trip.owner.nil? ? "anonymous" : trip.owner.name
+app/views/trips/details.html.haml: %span.span8= @trip.owner.nil? ? "anonymous" : link_to(@trip.owner.name, user_path(@trip.owner))
+
+"no address"
+app/views/shared/_trips_table.html.haml: %td.left= trip.from_place.nil? ? "no address" : trip.from_place.nongeocoded_address
+app/views/shared/_trips_table.html.haml: %td.left= trip.to_place.nil? ? "no address" : trip.to_place.nongeocoded_address
+
+'shared/datatable_javascript'
+app/views/shared/_trips_table.html.haml: = render 'shared/datatable_javascript'
+
+'trip_from_place_attributes_nongeocoded_address'
+app/views/trips/_form.html.haml: %ul.dropdown-menu{data: {target: 'trip_from_place_attributes_nongeocoded_address'}}
+
+'place-option'
+app/views/trips/_form.html.haml: %a{data: {value: p.name}, class: 'place-option'}= p.name
+app/views/trips/_form.html.haml: %a{data: {value: p.name}, class: 'place-option'}= p.name
+app/views/trips/_form.html.haml: if (t.hasClass('place-option')) {
+
+'trip_to_place_attributes_nongeocoded_address'
+app/views/trips/_form.html.haml: %ul.dropdown-menu{data: {target: 'trip_to_place_attributes_nongeocoded_address'}}
+
+'trip-date'
+app/views/trips/_form.html.haml: = content_tag :div, id: 'trip-date' do
+
+'add-on'
+app/views/trips/_form.html.haml: = content_tag :span, class: 'add-on' do
+app/views/trips/_form.html.haml: = content_tag :span, class: 'add-on' do
+
+', class: '
+app/views/trips/_form.html.haml: = content_tag :i, '', class: 'icon-calendar'
+app/views/trips/_form.html.haml: = content_tag :i, '', class: 'icon-time'
+
+'trip-time'
+app/views/trips/_form.html.haml: = content_tag :div, id: 'trip-time' do
+
+'#trip-date'
+app/views/trips/_form.html.haml: $('#trip-date').datepicker()
+
+"dateChange"
+app/views/trips/_form.html.haml: .on("dateChange", function(e) {
+
+'#trip_trip_date'
+app/views/trips/_form.html.haml: $('#trip_trip_date').val(Date.format(e.date, "mm/dd/yyyy"));
+
+"mm/dd/yyyy"
+app/views/trips/_form.html.haml: $('#trip_trip_date').val(Date.format(e.date, "mm/dd/yyyy"));
+
+'#trip-time'
+app/views/trips/_form.html.haml: $('#trip-time').timepicker({
+app/views/trips/_form.html.haml: $('#trip_trip_time').val($('#trip-time').data('ui-timepicker-value'));
+
+'timeFormat'
+app/views/trips/_form.html.haml: 'timeFormat': 'g:i a',
+
+'g:i a'
+app/views/trips/_form.html.haml: 'timeFormat': 'g:i a',
+
+'scrollDefaultTime'
+app/views/trips/_form.html.haml: 'scrollDefaultTime': '9:00 am'
+
+'9:00 am'
+app/views/trips/_form.html.haml: 'scrollDefaultTime': '9:00 am'
+
+"changeTime"
+app/views/trips/_form.html.haml: .on("changeTime", function(e) {
+
+'#trip_trip_time'
+app/views/trips/_form.html.haml: $('#trip_trip_time').val($('#trip-time').data('ui-timepicker-value'));
+
+'ui-timepicker-value'
+app/views/trips/_form.html.haml: $('#trip_trip_time').val($('#trip-time').data('ui-timepicker-value'));
+
+'.combobox'
+app/views/trips/_form.html.haml: $('.combobox').combobox({
+
+'.dropdown-toggle'
+app/views/trips/_form.html.haml: $('.dropdown-toggle').dropdown();
+
+'.trip_from_place_address a, .trip_to_place_address a'
+app/views/trips/_form.html.haml: $('.trip_from_place_address a, .trip_to_place_address a').on('click', function(event) {
+
+'ul'
+app/views/trips/_form.html.haml: $('#' + t.parents('ul').data('target')).val(t.data('value'))
+
+'target'
+app/views/trips/_form.html.haml: $('#' + t.parents('ul').data('target')).val(t.data('value'))
+
+'value'
+app/views/trips/_form.html.haml: $('#' + t.parents('ul').data('target')).val(t.data('value'))
+
+"#{pluralize(@trip.hidden_itineraries.size, 'option')} hidden."
+app/views/trips/_hidden_trips_notice.html.haml: = "#{pluralize(@trip.hidden_itineraries.size, 'option')} hidden."
+
+'route'
+app/views/trips/_legs_summary.html.haml: %span.transit_itinerary_text= leg['route']
+app/views/trips/_transit_details.html.haml: %p= leg['mode'] + ' ' + leg['route'] + " to " + leg['to']['name']
+
+"modal hide fade"
+app/views/trips/_send_trip_by_email.html.haml: %div{:class => "modal hide fade", :id => "send_trip_by_email"}
+app/views/trips/_trip_details_modal.html.haml: %div{:class => "modal hide fade", :id => "transitDetails" + itinerary.id.to_s}
+
+"send_trip_by_email"
+app/views/trips/_send_trip_by_email.html.haml: %div{:class => "modal hide fade", :id => "send_trip_by_email"}
+
+"modal-header"
+app/views/trips/_send_trip_by_email.html.haml: %div{:class => "modal-header"}
+app/views/trips/_trip_details_modal.html.haml: %div{:class => "modal-header"}
+
+'send_by_email_form'
+app/views/trips/_send_trip_by_email.html.haml: id: 'send_by_email_form' }, data: {dismiss: 'modal'}  do |f|
+
+'modal'
+app/views/trips/_send_trip_by_email.html.haml: id: 'send_by_email_form' }, data: {dismiss: 'modal'}  do |f|
+app/views/trips/_trip_summary.html.haml: %a.span12.actionbutton{alt: get_trip_summary_title(itinerary.mode), title: get_trip_summary_title(itinerary.mode), 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s}
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-success", 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s} do
+app/views/trips/show.html.haml: = link_to '#', {href: '#send_trip_by_email', class: "pull-right", data: {toggle: 'modal'}} do
+
+'Send to traveler'
+app/views/trips/_send_trip_by_email.html.haml: = f.input :send_to_traveler, as: :boolean, label: 'Send to traveler'
+
+'From address'
+app/views/trips/_send_trip_by_email.html.haml: = f.input :from, label: 'From address', required: true
+
+'Email addresses'
+app/views/trips/_send_trip_by_email.html.haml: = f.input :email_addresses, label: 'Email addresses', required: false
+
+'btn btn-info'
+app/views/trips/_send_trip_by_email.html.haml: = button_tag type: :submit, class: 'btn btn-info' do
+
+'#send_by_email_form'
+app/views/trips/_send_trip_by_email.html.haml: $('#send_by_email_form').on('submit', function() {
+
+'submit'
+app/views/trips/_send_trip_by_email.html.haml: $('#send_by_email_form').on('submit', function() {
+
+'#send_trip_by_email'
+app/views/trips/_send_trip_by_email.html.haml: $('#send_trip_by_email').modal('hide')
+app/views/trips/show.html.haml: = link_to '#', {href: '#send_trip_by_email', class: "pull-right", data: {toggle: 'modal'}} do
+
+'name'
+app/views/trips/_taxi_details.html.haml: %h4=business['name'] + ":  "
+app/views/trips/_transit_details.html.haml: %p= leg['mode'] + ' ' + leg['route'] + " to " + leg['to']['name']
+
+":  "
+app/views/trips/_taxi_details.html.haml: %h4=business['name'] + ":  "
+
+'phone'
+app/views/trips/_taxi_details.html.haml: %h4=business['phone']
+
+'start_icon'
+app/views/trips/_transit_details.html.haml: %i.icon-play.mode_icon_formatting{:class => 'start_icon'}
+
+"START: "
+app/views/trips/_transit_details.html.haml: %p= "START: " + itinerary.trip.from_place.address
+
+'%I:%M %p'
+app/views/trips/_transit_details.html.haml: = itinerary.start_time.in_time_zone.strftime('%I:%M %p')
+app/views/trips/_transit_details.html.haml: = Time.at(leg['startTime'].to_f/1000).in_time_zone.strftime('%I:%M %p') + ' to ' + Time.at(leg['endTime'].to_f/1000).in_time_zone.strftime('%I:%M %p')
+app/views/trips/_transit_details.html.haml: = Time.at(leg['startTime'].to_f/1000).in_time_zone.strftime('%I:%M %p') + ' to ' + Time.at(leg['endTime'].to_f/1000).in_time_zone.strftime('%I:%M %p')
+app/views/trips/_transit_details.html.haml: =itinerary.end_time.in_time_zone.strftime('%I:%M %p')
+app/views/trips/_trip_summary_header.html.haml: .span9.offset3.trip_summary_text= t(:arrive_at) + ' ' + itinerary.end_time.in_time_zone.strftime('%I:%M %p')
+app/views/trips/_trip_summary_header.html.haml: .span9.offset3.trip_summary_text= t(:depart_at) + ' ' + itinerary.start_time.in_time_zone.strftime('%I:%M %p')
+
+" to "
+app/views/trips/_transit_details.html.haml: %p= leg['mode'] + ' ' + leg['route'] + " to " + leg['to']['name']
+
+'to'
+app/views/trips/_transit_details.html.haml: %p= leg['mode'] + ' ' + leg['route'] + " to " + leg['to']['name']
+
+' to '
+app/views/trips/_transit_details.html.haml: = Time.at(leg['startTime'].to_f/1000).in_time_zone.strftime('%I:%M %p') + ' to ' + Time.at(leg['endTime'].to_f/1000).in_time_zone.strftime('%I:%M %p')
+app/views/trips/show.html.haml: .trip_prepositions= ' to '
+
+'end_icon'
+app/views/trips/_transit_details.html.haml: %i.icon-stop.mode_icon_formatting{:class => 'end_icon'}
+
+"ARRIVE: "
+app/views/trips/_transit_details.html.haml: %p= "ARRIVE: " + itinerary.trip.to_place.address
+
+"transitDetails"
+app/views/trips/_trip_details_modal.html.haml: %div{:class => "modal hide fade", :id => "transitDetails" + itinerary.id.to_s}
+
+"display: inline-block"
+app/views/trips/_trip_details_modal.html.haml: .pull-right{:style => "display: inline-block"}
+app/views/trips/_trip_details_modal.html.haml: .pull-right{:style => "display: inline-block"}
+app/views/trips/_trip_summary.html.haml: .pull-right{:style => "display: inline-block"}
+
+"button btn btn-mini btn-success"
+app/views/trips/_trip_details_modal.html.haml: %a{class: "button btn btn-mini btn-success", "data-dismiss" => "modal"}
+
+"modal"
+app/views/trips/_trip_details_modal.html.haml: %a{class: "button btn btn-mini btn-success", "data-dismiss" => "modal"}
+app/views/trips/_trip_details_modal.html.haml: =link_to hide_trip_path(itinerary), {"data-dismiss" => "modal",  class: "btn btn-mini btn-danger", remote: true} do
+app/views/users/_user.html.haml: %a.close{"data-dismiss" => "modal"} ×
+app/views/users/_user.html.haml: %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+app/views/users/index.html.haml: %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change role
+
+"btn btn-mini btn-danger"
+app/views/trips/_trip_details_modal.html.haml: =link_to hide_trip_path(itinerary), {"data-dismiss" => "modal",  class: "btn btn-mini btn-danger", remote: true} do
+app/views/trips/_trip_summary.html.haml: =link_to hide_trip_path(itinerary), {class: "btn btn-mini btn-danger", remote: true} do
+
+"modal-body"
+app/views/trips/_trip_details_modal.html.haml: %div{:class => "modal-body"}
+
+'trip_summary_header'
+app/views/trips/_trip_details_modal.html.haml: = render :partial => 'trip_summary_header', :locals => { :itinerary => itinerary }
+app/views/trips/_trip_summary.html.haml: = render :partial => 'trip_summary_header', :locals => { :itinerary => itinerary }
+
+"container-fluid"
+app/views/trips/_trip_details_modal.html.haml: %div{:class => "container-fluid"}
+
+"details-title"
+app/views/trips/_trip_details_modal.html.haml: %h4.text-center{:id => "details-title"}=t(:details)
+
+'_details'
+app/views/trips/_trip_details_modal.html.haml: = render :partial => itinerary['mode']+'_details', :locals => { :itinerary => itinerary }
+
+"modal-footer"
+app/views/trips/_trip_details_modal.html.haml: %div{:class => "modal-footer"}
+
+"itinerary#{itinerary.id}"
+app/views/trips/_trip_itineraries.html.haml: %li.trip_summary.thumbnail.box-shadow{id: "itinerary#{itinerary.id}"}
+
+'trip_summary'
+app/views/trips/_trip_itineraries.html.haml: = render :partial => 'trip_summary', :locals => { :itinerary => itinerary, :icon => get_trip_summary_icon(itinerary.mode), :title => get_trip_summary_title(itinerary.mode) }
+
+'data-toggle'
+app/views/trips/_trip_summary.html.haml: %a.span12.actionbutton{alt: get_trip_summary_title(itinerary.mode), title: get_trip_summary_title(itinerary.mode), 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s}
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-success", 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s} do
+
+"#transitDetails"
+app/views/trips/_trip_summary.html.haml: %a.span12.actionbutton{alt: get_trip_summary_title(itinerary.mode), title: get_trip_summary_title(itinerary.mode), 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s}
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-success", 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s} do
+
+"#"
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-info"} do
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-success", 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s} do
+app/views/trips/details.html.haml: = link_to "#", {class: "btn btn-mini btn-success text-center"} do
+app/views/users/_user.html.haml: %a.btn{"data-dismiss" => "modal", :href => "#"} Close
+
+"btn btn-mini btn-info"
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-info"} do
+
+"btn btn-mini btn-success"
+app/views/trips/_trip_summary.html.haml: =link_to "#", {class: "btn btn-mini btn-success", 'data-toggle'=>'modal', href:"#transitDetails" + itinerary.id.to_s} do
+
+'trip_details_modal'
+app/views/trips/_trip_summary.html.haml: = render :partial => 'trip_details_modal', :locals => { :itinerary => itinerary }
+
+" (est.)"
+app/views/trips/_trip_summary_header.html.haml: .span9.offset3.trip_summary_text= duration_to_words(itinerary.duration) + " (est.)"
+
+'arrive_by'
+app/views/trips/_trip_summary_header.html.haml: -if itinerary.trip.arrive_depart == 'arrive_by' && itinerary.end_time
+
+'depart_at'
+app/views/trips/_trip_summary_header.html.haml: -if itinerary.trip.arrive_depart == 'depart_at' && itinerary.start_time
+
+' walking'
+app/views/trips/_trip_summary_header.html.haml: .span9.offset3.trip_summary_text= duration_to_words(itinerary.walk_time) + ' walking'
+
+"Trip: "
+app/views/trips/details.html.haml: = "Trip: " + @trip.id.to_s
+
+'#itineraries'
+app/views/trips/hide.js.haml: $('#itineraries').html("#{escape_javascript(render 'trip_itineraries')}");
+
+"#{escape_javascript(render 'trip_itineraries')}"
+app/views/trips/hide.js.haml: $('#itineraries').html("#{escape_javascript(render 'trip_itineraries')}");
+
+'#hidden_trips_notice'
+app/views/trips/hide.js.haml: $('#hidden_trips_notice').html("#{escape_javascript(render 'hidden_trips_notice')}");
+
+"#{escape_javascript(render 'hidden_trips_notice')}"
+app/views/trips/hide.js.haml: $('#hidden_trips_notice').html("#{escape_javascript(render 'hidden_trips_notice')}");
+
+'My Trips'
+app/views/trips/index.html.haml: = !assisting? ? 'My Trips' : "#{assisted_user.first_name}'s Trips"
+
+"#{assisted_user.first_name}'s Trips"
+app/views/trips/index.html.haml: = !assisting? ? 'My Trips' : "#{assisted_user.first_name}'s Trips"
+
+'index_subnav'
+app/views/trips/index.html.haml: = render 'index_subnav'
+
+"icon #{CsHelpers::ACTION_ICONS[:plan_a_trip]}"
+app/views/trips/new.html.haml: %i{class: "icon #{CsHelpers::ACTION_ICONS[:plan_a_trip]}"}
+app/views/trips/show.html.haml: %i{class: "icon #{CsHelpers::ACTION_ICONS[:plan_a_trip]}"}
+
+"alert alert-error"
+app/views/trips/new.html.haml: %div{:class => "alert alert-error"}
+
+'form'
+app/views/trips/new.html.haml: = render 'form'
+
+'from '
+app/views/trips/show.html.haml: .trip_prepositions= 'from '
+
+' on '
+app/views/trips/show.html.haml: .trip_prepositions= ' on '
+
+"%B %d, %Y"
+app/views/trips/show.html.haml: .trip_basic_text= @trip.trip_datetime.in_time_zone.strftime("%B %d, %Y")
+
+'trip_itineraries'
+app/views/trips/show.html.haml: = render 'trip_itineraries'
+
+'hidden_trips_notice'
+app/views/trips/show.html.haml: = render partial: 'hidden_trips_notice', locals: {trip: @trip}
+
+"pull-right"
+app/views/trips/show.html.haml: = link_to '#', {href: '#send_trip_by_email', class: "pull-right", data: {toggle: 'modal'}} do
+
+'send_trip_by_email'
+app/views/trips/show.html.haml: = render partial: 'send_trip_by_email', locals: {trip: @trip}
+
+'.actionbutton'
+app/views/trips/show.html.haml: make_same_height('.actionbutton');
+
+"#itineraries"
+app/views/trips/show.html.haml: $("#itineraries").on("ajax:error", function(xhr,status){
+
+"ajax:error"
+app/views/trips/show.html.haml: $("#itineraries").on("ajax:error", function(xhr,status){
+
+'responseText'
+app/views/trips/show.html.haml: alert(status['responseText']);
+
+"Trip options information from #{@from}"
+app/views/user_mailer/user_trip_email.html.haml: %p= "Trip options information from #{@from}"
+
+"role-options-#{user.id}"
+app/views/users/_user.html.haml: .modal{:id => "role-options-#{user.id}", :style => "display: none;"}
+
+"display: none;"
+app/views/users/_user.html.haml: .modal{:id => "role-options-#{user.id}", :style => "display: none;"}
+
+'inline'
+app/views/users/_user.html.haml: = f.input :role_ids, :collection => Role.all, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, :item_wrapper_class => 'inline', checked: user.role_ids.first
+
+"Change Role"
+app/views/users/_user.html.haml: = f.submit "Change Role", :class => "btn"
+
+"btn"
+app/views/users/_user.html.haml: = f.submit "Change Role", :class => "btn"
+
+"data-toggle"
+app/views/users/index.html.haml: %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change role
+
+"#role-options-#{user.id}"
+app/views/users/index.html.haml: %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change role
+
+"Delete user"
+app/views/users/index.html.haml: %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+
+"Are you sure?"
+app/views/users/index.html.haml: %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+
+'btn btn-mini'
+app/views/users/index.html.haml: %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+

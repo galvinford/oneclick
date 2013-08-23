@@ -1,0 +1,200 @@
+# Spanish
+
+es:
+  one_click_trip_planner: '<s1>1-Click Viaje Planificador</s>'
+  # Actions
+  plan_a_trip: '<s2>Planear un Viaje</s>'
+  plan_a_new_trip: '<s3>Plan a new trip</s>'
+  identify_places: '<s4>Identificar los Lugares</s>'
+  change_my_settings: '<s5>Cambiar mi Configuración</s>'
+  help_and_support: '<s6>Ayuda y Soporte</s>'
+  create_an_account: '<s7>Create an Account</s>'
+  travel_profile: '<s8>Travel Profile</s>'
+  previous_trips: '<s9>Previous Trips</s>'
+  # Agent View strings
+  find_traveler: "<s10>Find Traveler</s>"
+  create_traveler: "<s11>Create Traveler</s>"
+  agents_agencies: "<s12>Agents Agencies</s>"
+  # Agent and Admin string
+  reports: "<s13>Reports</s>"
+  admin: '<s14>Admin</s>'
+
+  # Registration, sign in, profile
+  version: '<s15>Versión</s>'
+  home: "Inicio"
+  log_in: '<s16>Iniciar</s>'
+  sign_up: '<s17>Alistarse</s>'
+  welcome: '<s18>Welcome</s>'
+  first_name: '<s19>First name</s>'
+  last_name: '<s20>Last name</s>'
+  email: '<s21>Email address</s>'
+  password: '<s22>Password</s>'
+  password_confirmation: '<s23>Password confirmation</s>'
+  current_password: '<s24>Current password</s>'
+  forgot_your_password: '<s25>¿Olvidó su contraseña?</s>'
+  retype_your_password: '<s26>Retype your password</s>'
+  logout: '<s27>Logout</s>'
+  edit_account: '<s28>Edit account</s>'
+  update_my_profile: '<s29>Update my profile</s>'
+  current_password_hint: "<s30>Enter your current password to confirm your changes.</s>"  
+  leave_password_blank: "<s31>Leave both blank if you don't want to change your password.</s>"
+  my_information: '<s32>My information</s>'
+  buddies: '<s33>Buddies</s>'
+  travelers: '<s34>Travelers</s>'
+  send_buddy_request: '<s35>Send buddy request</s>'
+  buddys_email_address: "<s36>Buddy's email address</s>"
+  accept: '<s37>Accept</s>'
+  decline: '<s38>Decline</s>'
+  assist: '<s39>Assist</s>'
+  revoke: '<s40>Revoke</s>'
+
+  spanish: '<s41>En Español</s>'
+  error_not_implemented: '<s42>Lo sentimos, pero esta funcionalidad aún no se ha implementado.</s>'
+  error_404: "<s43>The page you were looking for doesn't exist.</s>"
+  error_404_mistyped: '<s44>You may have mistyped the address or the page may have moved.</s>'
+  error_422: '<s45>The change you wanted was rejected.</s>'
+  error_422_detail: "<s46>Maybe you tried to change something you didn't have access to.</s>"
+
+  # Trip planning
+  enter_address: '<s47>Enter address</s>'
+  select_or_enter_address: '<s48>Select or enter address</s>'
+  select: '<s49>Select</s>'
+  date: '<s50>Date</s>'
+  depart_at: '<s51>Depart at</s>'
+  arrive_by: '<s52>Arrive by</s>'
+  arrive_at: '<s53>Arrive at</s>'
+  time: '<s54>Time</s>'
+  cancel: '<s55>Cancel</s>'
+  plan_it: '<s56>Plan it</s>'
+  from: '<s57>From</s>'
+  to: '<s58>To</s>'  
+  correct_errors_to_create_a_trip: '<s59>Please correct the errors below to create a trip.</s>'
+  trip_options: '<s60>Trip Options</s>'
+  transit_trip: '<s61>Transit Trip</s>'
+  taxi: '<s62>Taxi</s>'
+  transit: '<s63>Transit</s>'
+  details: '<s64>Details</s>'
+  transfer: {
+      one: '<s65>%{count} <s>transfer</s>',
+      other: '<s66>%{count} <s>transfers</s>',
+  }
+  view: '<s67>View</s>'
+  remove: '<s68>Remove</s>'
+  reload: '<s69>Reload</s>'
+  return: '<s70>Return</s>'
+  paratransit: '<s71>Paratransit</s>'
+  mode: '<s72>Mode</s>'
+  duration: '<s73>Duration</s>'
+  walking: '<s74>Walking</s>'
+  depart: '<s75>Depart</s>'
+  arrive: '<s76>Arrive</s>'
+  cost: '<s77>Cost</s>'
+  print: '<s78>Print</s>'
+  chat: '<s79>Chat</s>'
+  e_mail: '<s80>Email</s>'
+  trip_was_successfully_created: '<s81>Trip was successfully created.</s>'
+  trip_created_no_valid_options: "<s82>Trip created, but no valid trip options could be found:</s>"
+  hour: {
+    one: '<s83>%{count} h',
+    other: '<s84>%{count} h',
+  }
+  minute: {
+    one: '<s85>%{count} min',
+    other: '<s86>%{count} mins',
+  }
+  less_than_one_minute: '<s87>Under 1 min</s>'
+  invalid_address: "<s88>Invalid address.</s>"
+  invalid_location: "<s89>Invalid location.</s>"
+  date_wrong_format: "<s90>Date must be in MM/DD/YYYY format.</s>"
+  time_wrong_format: "<s91>Time must be in hh:mm am/pm format.</s>"
+  trips_cannot_be_entered_for_days: "<s92>Trips cannot be entered for days earlier than today.</s>"
+  trips_cannot_be_entered_for_times: "<s93>Trips cannot be entered for past times.</s>"
+
+  # new ones
+  buddy_request_sent: "<s70>Buddy request sent!</s>"
+  buddy_removed: "<s69>Buddy removed.</s>"
+  http_404_not_found: "<s49>404 Not Found</s>"
+  http_422_unprocessable_entity: "<s50>422 Unprocessable Entity</s>"
+  http_501_not_implemented: "<s51>501 Not Implemented</s>"
+  arc_oneclick_trip_itinerary: "<s60>ARC OneClick Trip Itinerary</s>"
+  an_email_was_sent_to_email_addresses_join: "<s63>An email was sent to %{addresses}.</s>"
+  unable_to_remove_itinerary: '<s313>Unable to remove itinerary.</s>'
+  not_authorized_as_an_administrator: '<s305>Not authorized as an administrator.</s>'
+  n_a: '<s459>n/a</s>'
+  less_than_1_block: "<s166>less than 1 block</s>"
+  about_2_blocks: "<s104>about 2 blocks</s>"
+  about_4_blocks: "<s105>about 4 blocks</s>"
+  twof_miles: "<s18>%.2f miles</s>"
+  one_click_buddy_request_from_from_email: "<s46>1-Click buddy request from %{from_email}</s>"
+  you_can_t_be_your_own_buddy: "<s98>You can't be your own buddy.</s>"
+  you_ve_already_asked_them_to_be_a_buddy: "<s99>You've already asked them to be a buddy.</s>"
+  address_is_required: "<s62>Address is required</s>"
+  last_30_days: "<s79>Last 30 days</s>"
+  last_7_days: "<s80>Last 7 days</s>"
+  last_month: "<s81>Last month</s>"
+  this_month: "<s89>This month</s>"
+  today: "<s90>Today</s>"
+  yesterday: "<s97>Yesterday</s>"
+  ago: "<s2> ago</s>"
+  didn_t_receive_confirmation_instructions: "<s75>Didn't receive confirmation instructions?</s>"
+  didn_t_receive_unlock_instructions: "<s76>Didn't receive unlock instructions?</s>"
+  sign_in_with_provider_to_s_titleize: "<s88>Sign in with %{provider}</s>"
+  assisting_assisted_user_email: "<s66>Assisting %{assisted_user}</s>"
+  menu__object_plural_per_page: "<s102>_MENU_ %{object} per page</s>"
+  _menu__records_per_page: "<s103>_MENU_ records per page</s>"
+  showing__start__to__end__of__total__object_plural: "<s87>Showing _START_ to _END_ of _TOTAL_ %{object}</s>"
+  anonymous: "<s112>anonymous</s>"
+  no_address: "<s177>no address</s>"
+  trip_options_hidden: {
+    one: '<s14>%{count} option hidden.</s>',
+    other: '<s14>%{count} options hidden.</s>'
+  }
+  send_to_traveler: '<s310>Send to traveler</s>'
+  from_address: '<s301>From address</s>'
+  email_addresses: '<s297>Email addresses</s>'
+  start: "<s86>START: </s>"
+  on: '<s221> on </s>'
+  to: '<s222> to </s>'
+  walking: '<s223> walking</s>'
+  arrive: "<s61>ARRIVE: </s>"
+  trip: "<s92>Trip: </s>"
+  est: "<s0> (est.)</s>"
+  to: "<s3> to </s>"
+  my_trips: '<s303>My Trips</s>'
+  assisted_user_first_name_s_trips: "<s10>%{name}'s Trips</s>"
+  trip_options_information_from_from: "<s91>Trip options information from #{@from}</s>"
+  
+
+  # Branding
+  arc:
+    logotext: ''
+    site_title: '<s94>ARC 1-Click</s>'
+    site_description: '<s95>ARC 1-Click Application</s>'
+  yata:
+    logotext: ''
+    site_title: '<s96>YATA 1-Click</s>'
+    site_description: '<s97>YATA 1-Click Application</s>'
+  broward:
+    logotext: ''
+    site_title: '<s98>Broward 1-Click</s>'
+    site_description: '<s99>Broward 1-Click Application</s>'
+  simple_form:
+    labels:
+      defaults:
+        email: '<s100>Email</s>'
+        password: '<s101>Contraseña</s>'
+        remember_me: '<s102>Acuérdate de mí</s>'
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "<s103>can't be blank</s>"
+              invalid: "<s104>is invalid</s>"
+            password:
+              blank: "<s105>can't be blank</s>"
+              confirmation: "<s106>doesn't match confirmation</s>"
+            current_password:
+              blank: "<s107>can't be blank</s>"

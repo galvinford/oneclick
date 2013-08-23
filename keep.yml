@@ -1,0 +1,98 @@
+buddy_request_sent: "Buddy request sent!"# <s70>
+buddy_request_sent: "<s70>Buddy request sent!</s>"
+buddy_removed: "Buddy removed."# <s69>
+buddy_removed: "<s69>Buddy removed.</s>"
+http_404_not_found: "404 Not Found"# <s49>
+http_404_not_found: "<s49>404 Not Found</s>"
+http_422_unprocessable_entity: "422 Unprocessable Entity"# <s50>
+http_422_unprocessable_entity: "<s50>422 Unprocessable Entity</s>"
+http_501_not_implemented: "501 Not Implemented"# <s51>
+http_501_not_implemented: "<s51>501 Not Implemented</s>"
+arc_oneclick_trip_itinerary: "ARC OneClick Trip Itinerary"# <s60>
+arc_oneclick_trip_itinerary: "<s60>ARC OneClick Trip Itinerary</s>"
+an_email_was_sent_to_email_addresses_join: "An email was sent to #{email_addresses.join(', ')}."# <s63>
+an_email_was_sent_to_email_addresses_join: "<s63>An email was sent to #{email_addresses.join(', ')}.</s>"
+unable_to_remove_itinerary: 'Unable to remove itinerary.'# <s313>
+unable_to_remove_itinerary: '<s313>Unable to remove itinerary.</s>'
+not_authorized_as_an_administrator: 'Not authorized as an administrator.'# <s305>
+not_authorized_as_an_administrator: '<s305>Not authorized as an administrator.</s>'
+n_a: 'n/a'# <s459>
+n_a: '<s459>n/a</s>'
+less_than_1_block: "less than 1 block"# <s166>
+less_than_1_block: "<s166>less than 1 block</s>"
+about_2_blocks: "about 2 blocks"# <s104>
+about_2_blocks: "<s104>about 2 blocks</s>"
+about_4_blocks: "about 4 blocks"# <s105>
+about_4_blocks: "<s105>about 4 blocks</s>"
+twof_miles: "%.2f miles"# <s18>
+twof_miles: "<s18>%.2f miles</s>"
+one_click_buddy_request_from_from_email: "1-Click buddy request from #{@from_email}"# <s46>
+one_click_buddy_request_from_from_email: "<s46>1-Click buddy request from #{@from_email}</s>"
+you_can_t_be_your_own_buddy: "You can't be your own buddy."# <s98>
+you_can_t_be_your_own_buddy: "<s98>You can't be your own buddy.</s>"
+you_ve_already_asked_them_to_be_a_buddy: "You've already asked them to be a buddy."# <s99>
+you_ve_already_asked_them_to_be_a_buddy: "<s99>You've already asked them to be a buddy.</s>"
+address_is_required: "Address is required"# <s62>
+address_is_required: "<s62>Address is required</s>"
+last_30_days: "Last 30 days"# <s79>
+last_30_days: "<s79>Last 30 days</s>"
+last_7_days: "Last 7 days"# <s80>
+last_7_days: "<s80>Last 7 days</s>"
+last_month: "Last month"# <s81>
+last_month: "<s81>Last month</s>"
+this_month: "This month"# <s89>
+this_month: "<s89>This month</s>"
+today: "Today"# <s90>
+today: "<s90>Today</s>"
+yesterday: "Yesterday"# <s97>
+yesterday: "<s97>Yesterday</s>"
+ago: " ago"# <s2>
+ago: "<s2> ago</s>"
+didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"# <s75>
+didn_t_receive_confirmation_instructions: "<s75>Didn't receive confirmation instructions?</s>"
+didn_t_receive_unlock_instructions: "Didn't receive unlock instructions?"# <s76>
+didn_t_receive_unlock_instructions: "<s76>Didn't receive unlock instructions?</s>"
+sign_in_with_provider_to_s_titleize: "Sign in with #{provider.to_s.titleize}"# <s88>
+sign_in_with_provider_to_s_titleize: "<s88>Sign in with #{provider.to_s.titleize}</s>"
+assisting_assisted_user_email: "Assisting #{assisted_user.email}"# <s66>
+assisting_assisted_user_email: "<s66>Assisting #{assisted_user.email}</s>"
+menu__object_plural_per_page: "_MENU_ #{object_plural} per page"# <s102>
+menu__object_plural_per_page: "<s102>_MENU_ #{object_plural} per page</s>"
+_menu__records_per_page: "_MENU_ records per page"# <s103>
+_menu__records_per_page: "<s103>_MENU_ records per page</s>"
+showing__start__to__end__of__total__object_plural: "Showing _START_ to _END_ of _TOTAL_ #{object_plural}"# <s87>
+showing__start__to__end__of__total__object_plural: "<s87>Showing _START_ to _END_ of _TOTAL_ #{object_plural}</s>"
+anonymous: "anonymous"# <s112>
+anonymous: "<s112>anonymous</s>"
+no_address: "no address"# <s177>
+no_address: "<s177>no address</s>"
+pluralize_trip_hidden_itineraries_size_option_hidden: "#{pluralize(@trip.hidden_itineraries.size, 'option')} hidden."# <s14>
+pluralize_trip_hidden_itineraries_size_option_hidden: "<s14>#{pluralize(@trip.hidden_itineraries.size, 'option')} hidden.</s>"
+send_to_traveler: 'Send to traveler'# <s310>
+send_to_traveler: '<s310>Send to traveler</s>'
+from_address: 'From address'# <s301>
+from_address: '<s301>From address</s>'
+email_addresses: 'Email addresses'# <s297>
+email_addresses: '<s297>Email addresses</s>'
+start: "START: "# <s86>
+start: "<s86>START: </s>"
+on: ' on '# <s221>
+on: '<s221> on </s>'
+to: ' to '# <s222>
+to: '<s222> to </s>'
+walking: ' walking'# <s223>
+walking: '<s223> walking</s>'
+arrive: "ARRIVE: "# <s61>
+arrive: "<s61>ARRIVE: </s>"
+trip: "Trip: "# <s92>
+trip: "<s92>Trip: </s>"
+est: " (est.)"# <s0>
+est: "<s0> (est.)</s>"
+to: " to "# <s3>
+to: "<s3> to </s>"
+my_trips: 'My Trips'# <s303>
+my_trips: '<s303>My Trips</s>'
+assisted_user_first_name_s_trips: "#{assisted_user.first_name}'s Trips"# <s10>
+assisted_user_first_name_s_trips: "<s10>#{assisted_user.first_name}'s Trips</s>"
+trip_options_information_from_from: "Trip options information from #{@from}"# <s91>
+trip_options_information_from_from: "<s91>Trip options information from #{@from}</s>"
