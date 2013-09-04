@@ -154,7 +154,7 @@ class TripsController < TravelerAwareController
       if @trip_proxy.from_place_selected.blank? || @trip_proxy.from_place_selected_type.blank?
         geocoder.geocode(@trip_proxy.from_place)
         # store the results in the session
-        session[FROM_PLACES_SESSION_KEY] = encode(geocoder.results) unless ENV['DISABLE_PLACES_SESSION_CACHE']
+        session[FROM_PLACES_SESSION_KEY] = encode(geocoder.results) unless ENV.include? 'DISABLE_PLACES_SESSION_CACHE'
         @trip_proxy.from_place_results = geocoder.results
         if @trip_proxy.from_place_results.empty?
           # the user needs to select one of the alternatives
@@ -171,7 +171,7 @@ class TripsController < TravelerAwareController
       if @trip_proxy.to_place_selected.blank? || @trip_proxy.to_place_selected_type.blank?
         geocoder.geocode(@trip_proxy.to_place)
         # store the results in the session
-        session[TO_PLACES_SESSION_KEY] = encode(geocoder.results) unless ENV['DISABLE_PLACES_SESSION_CACHE']
+        session[TO_PLACES_SESSION_KEY] = encode(geocoder.results) unless ENV.include? 'DISABLE_PLACES_SESSION_CACHE'
         @trip_proxy.to_place_results = geocoder.results
         if @trip_proxy.to_place_results.empty?
           # the user needs to select one of the alternatives
@@ -345,7 +345,7 @@ class TripsController < TravelerAwareController
       # the user selected a place using the places drop-down
       place = @traveler.places.find(place_id)
       return {:place_id => place.id, :name => place.name, :lat => place.lat, :lon => place.lon, :address => place.address}
-    elsif place_type == RAW_ADDRESS_TYPE
+    elsif place_type == RAW_ADDRESS_TYPE and !ENV.include?(DISABLE_PLACES_SESSION_CACHE)
       # the user entered a raw address and possibly selected an alternate from the list of possible
       # addresses
       if is_from
