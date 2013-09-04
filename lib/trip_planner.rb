@@ -134,9 +134,18 @@ class TripPlanner
   end
 
   def get_rideshare_itineraries(from, to, trip_datetime)
+    Rails.logger.info "START GET RIDESHARE ITIN"
+    Rails.logger.info "FROM"
+    Rails.logger.info from.class.name
+    Rails.logger.info from.ai
+    Rails.logger.info "TO"
+    Rails.logger.info from.class.name
+    Rails.logger.info to.ai
     query = create_rideshare_query from, to, trip_datetime
+    Rails.logger.info query.ai
     resp = Mechanize.new.post(service_url, query)
     doc = Nokogiri::HTML(resp.body)
+    # Rails.logger.info resp.body
     results = doc.css('#results li div.marker.dest')
     if results.size > 0
       summary = doc.css('.summary').text

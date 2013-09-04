@@ -6,6 +6,9 @@ module ServiceAdapters
     end
 
     def create_rideshare_query from, to, trip_datetime
+      Rails.logger.info "create_rideshare_query"
+      Rails.logger.info from.ai
+      Rails.logger.info to.ai
       from_geo = Geocoder.transpose(YAML.load(from.geocoding_raw)) rescue {}
       to_geo = Geocoder.transpose(YAML.load(to.geocoding_raw)) rescue {}
       query = {}

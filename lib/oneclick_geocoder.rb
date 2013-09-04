@@ -34,7 +34,6 @@ class OneclickGeocoder
   end
 
   def geocode(raw_address)
-    Rails.logger.info "GEOCODE #{raw_address}"
     # reset the current state
     reset
     @raw_address = raw_address
@@ -43,10 +42,9 @@ class OneclickGeocoder
     end
     begin
       res = Geocoder.search(@raw_address, sensor: @sensor, components: @components, bounds: @bounds)
-      Rails.logger.info res.ai
       process_results(res)
     rescue Exception => e
-    Rails.logger.error format_exception(e)
+      Rails.logger.error format_exception(e)
       @errors << e.message
     end
     @errors.empty?
@@ -56,6 +54,8 @@ protected
   
   def process_results(res)
     i = 0
+    Rails.logger.info "PROCESS_RESULTS"
+    Rails.logger.info res.ai
     res.each do |alt|
       if is_valid(alt.types)
         @results << {

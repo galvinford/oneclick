@@ -31,8 +31,9 @@ class PlannedTrip < ActiveRecord::Base
   
   def create_itineraries
     create_fixed_route_itineraries
-    create_taxi_itineraries
     create_paratransit_itineraries
+    create_rideshare_itineraries
+    create_taxi_itineraries
   end
 
   # TODO refactor following 3 methods
@@ -74,6 +75,19 @@ class PlannedTrip < ActiveRecord::Base
 
       itinerary = tp.convert_paratransit_itineraries(service)
       self.itineraries << Itinerary.new(itinerary)
+    end
+  end
+
+  def create_rideshare_itineraries
+    tp = TripPlanner.new
+    from_place = trip.trip_places.first
+    to_place = trip.trip_places.last
+    result, response = tp.get_rideshare_itineraries(from_place, to_place, trip_datetime.in_time_zone)
+    if result
+      itinerary = tp.convert_rideshare_itineraries(response)
+      itineraries << Itinerary.new(itinerary)
+    else
+      itineraries << Itinerary.new('server_status'=>500, 'server_message'=>response)
     end
   end
  

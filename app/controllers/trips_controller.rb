@@ -154,7 +154,7 @@ class TripsController < TravelerAwareController
       if @trip_proxy.from_place_selected.blank? || @trip_proxy.from_place_selected_type.blank?
         geocoder.geocode(@trip_proxy.from_place)
         # store the results in the session
-        session[FROM_PLACES_SESSION_KEY] = encode(geocoder.results)
+        session[FROM_PLACES_SESSION_KEY] = encode(geocoder.results) unless ENV['DISABLE_PLACES_SESSION_CACHE']
         @trip_proxy.from_place_results = geocoder.results
         if @trip_proxy.from_place_results.empty?
           # the user needs to select one of the alternatives
@@ -171,7 +171,7 @@ class TripsController < TravelerAwareController
       if @trip_proxy.to_place_selected.blank? || @trip_proxy.to_place_selected_type.blank?
         geocoder.geocode(@trip_proxy.to_place)
         # store the results in the session
-        session[TO_PLACES_SESSION_KEY] = encode(geocoder.results)
+        session[TO_PLACES_SESSION_KEY] = encode(geocoder.results) unless ENV['DISABLE_PLACES_SESSION_CACHE']
         @trip_proxy.to_place_results = geocoder.results
         if @trip_proxy.to_place_results.empty?
           # the user needs to select one of the alternatives
@@ -267,15 +267,14 @@ class TripsController < TravelerAwareController
   private
 
   def encode(addresses)
-    a = []
-    addresses.each do |addr|
-      a << {
+    addresses.collect do |addr|
+      Rails.logger.info addr.ai
+      {
         :address => addr[:street_address],
         :lat => addr[:lat],
         :lon => addr[:lon]
       }
     end
-    return a
   end
   
 
