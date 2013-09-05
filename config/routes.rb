@@ -7,7 +7,12 @@ Oneclick::Application.routes.draw do
       root :to => 'home#index'
     end
 
-    devise_for :users, controllers: {registrations: "registrations"}
+    devise_for :users, controllers: {registrations: "registrations", sessions: 'sessions'}
+
+    devise_scope :user do
+      get "/sessions/show", to: "sessions#show", as: 'sessions_show'
+      get "/sessions/clear", to: "sessions#clear", as: 'sessions_clear'
+    end
 
     resources :admins, :only => [:index]
 

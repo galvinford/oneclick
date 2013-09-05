@@ -34,7 +34,6 @@ class OneclickGeocoder
   end
 
   def geocode(raw_address)
-    Rails.logger.info "GEOCODE"
     # reset the current state
     reset
     @raw_address = raw_address
@@ -43,7 +42,6 @@ class OneclickGeocoder
     end
     begin
       res = Geocoder.search(@raw_address, sensor: @sensor, components: @components, bounds: @bounds)
-      Rails.logger.info res.ai
       process_results(res)
     rescue Exception => e
       Rails.logger.error format_exception(e)
@@ -56,17 +54,20 @@ protected
   
   def process_results(res)
     i = 0
-    Rails.logger.info "PROCESS_RESULTS"
-    Rails.logger.info res.ai
     res.each do |alt|
+      # Rails.logger.info alt.data.ai
+      # Rails.logger.info "address: #{alt.address}"
+      # Rails.logger.info "#{alt.public_methods.sort - Object.new.public_methods.sort}"
       if is_valid(alt.types)
         @results << {
           :id => i,
           :name => alt.formatted_address.split(",")[0],
           :formatted_address => sanitize_formattted_address(alt.formatted_address),
           :street_address => sanitize_formattted_address(alt.address),
+          :street_address_only => alt.street_address,
           :city => alt.city,
           :state => alt.state_code,
+          :country => alt.country,
           :zip => alt.postal_code,
           :lat => alt.latitude,
           :lon => alt.longitude
@@ -86,6 +87,10 @@ protected
   
   # Filters addresses returned by Google to only those we want to consider
   def is_valid(addr_types)
+    
+    # bypass this filtering for now; *maybe* we filter out locality or political?
+    return true
+
     addr_types.each do |addr_type|
       if ['street_address', 'route', 'intersection', 'natural_feature', 'airport', 'park', 'point_of_interest'].include?(addr_type)
         return true

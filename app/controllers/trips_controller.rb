@@ -268,7 +268,7 @@ class TripsController < TravelerAwareController
 
   def encode(addresses)
     addresses.collect do |addr|
-      Rails.logger.info addr.ai
+      Rails.logger.info "encode: #{addr.ai}"
       {
         :address => addr[:street_address],
         :lat => addr[:lat],
@@ -345,7 +345,7 @@ class TripsController < TravelerAwareController
       # the user selected a place using the places drop-down
       place = @traveler.places.find(place_id)
       return {:place_id => place.id, :name => place.name, :lat => place.lat, :lon => place.lon, :address => place.address}
-    elsif place_type == RAW_ADDRESS_TYPE and !ENV.include?(DISABLE_PLACES_SESSION_CACHE)
+    elsif place_type == RAW_ADDRESS_TYPE and !ENV.include?('DISABLE_PLACES_SESSION_CACHE')
       # the user entered a raw address and possibly selected an alternate from the list of possible
       # addresses
       if is_from
