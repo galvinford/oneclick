@@ -38,6 +38,7 @@ guard :rspec do
 
   # special cases
   watch('app/models/buddy_relationship.rb')           { 'spec/models/user_spec.rb' }
+  watch(%r{app/models/.*trip.*\.rb})                  { 'spec/controllers/trips_controller_spec.rb' }
   
   # Capybara features specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| ["spec/features/#{m[1]}_spec.rb", 'spec/features/localization_spec.rb'] }

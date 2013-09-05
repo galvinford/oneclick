@@ -325,6 +325,8 @@ class TripsController < TravelerAwareController
     planned_trip.is_depart = trip_proxy.arrive_depart == 'departing at' ? true : false
     planned_trip.trip_datetime = trip_proxy.trip_datetime
     planned_trip.trip_status = TripStatus.find_by_name(TripStatus::STATUS_NEW)    
+    puts TripStatus.all.ai
+    puts "Trip status is #{planned_trip.trip_status}"
     
     trip.planned_trips << planned_trip
 

@@ -8,6 +8,8 @@ class PlannedTrip < ActiveRecord::Base
   has_many :valid_itineraries, :conditions => 'server_status=200 AND hidden=false', :class_name => 'Itinerary' 
   has_many :hidden_itineraries, :conditions => 'server_status=200 AND hidden=true', :class_name => 'Itinerary'
 
+  validate :trip_status, presence: true
+
   attr_accessible :trip_datetime, :is_depart
  
   # Scopes

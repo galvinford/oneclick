@@ -4,6 +4,7 @@ require 'time'
 describe TripsController do
   describe "POST #create" do
     it "creates a trip, given correct parameters" do
+      FactoryGirl.create(:trip_status)
       geocoder = double()
       geocoder.should_receive(:geocode).with('bar')
       geocoder.should_receive(:results).and_return [{street_address: '1 bar st', lat: 1.0, lon: 2.0}]
