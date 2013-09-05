@@ -7,6 +7,8 @@ class TripProxy < Proxy
   attr_accessor :from_place_selected, :to_place_selected
   attr_accessor :from_place_selected_type, :to_place_selected_type
   attr_accessor :mode
+
+  attr_accessor :from_place_options, :to_place_options
   
   validates :from_place, :presence => true
   validates :to_place, :presence => true

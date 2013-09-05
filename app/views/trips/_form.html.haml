@@ -20,8 +20,9 @@
     - else
       = f.input :from_place, :class => "inline span12", :label => t(:from) do
         = f.text_field :from_place, :placeholder => t(:enter_address), :id => "from_address", :autocomplete => "off", :class => "ajax-typeahead", :data => {:link => search_user_places_path, :provide => "typeahead"}
-
-    = render :partial => 'alt_address_select', :locals => {:results => @trip_proxy.from_place_results, :type => "from"} unless @trip_proxy.from_place.blank? || @trip_proxy.from_place_selected_type == "1"
+    - unless @trip_proxy.from_place_options.blank?
+      = f.input :from_place_options, as: :select
+    / = render :partial => 'alt_address_select', :locals => {:results => @trip_proxy.from_place_results, :type => "from"} unless @trip_proxy.from_place.blank? || @trip_proxy.from_place_selected_type == "1"
 
     - if user_signed_in?
       = f.input :to_place, :wrapper => :append, :class => "inline span12", :label => t(:to) do

@@ -142,6 +142,8 @@ class TripsController < TravelerAwareController
   # POST /trips.json
   def create
 
+    puts params.inspect
+
     @trip_proxy = TripProxy.new(params[:trip_proxy])
     @trip_proxy.traveler = @traveler
   
